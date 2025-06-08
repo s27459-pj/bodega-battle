@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4iiq85v5yxys"]
+
+[ext_resource type="Script" uid="uid://bqefudl30vnyu" path="res://objects/defences/gum_turret-logic.gd" id="1_akpdl"]
+[ext_resource type="Texture2D" uid="uid://dyn7xm152kns2" path="res://assets/sprites/defences/gumball.png" id="1_h0vw2"]
+
+[node name="Gum-turret" type="Node2D"]
+script = ExtResource("1_akpdl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3, 3)
+texture = ExtResource("1_h0vw2")
