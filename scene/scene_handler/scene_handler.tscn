@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://2bmnf1uhsevm"]
+[gd_scene load_steps=6 format=3 uid="uid://2bmnf1uhsevm"]
 
 [ext_resource type="Script" uid="uid://gf3ydq16c1qs" path="res://scene/scene_handler/scene_handler.gd" id="1_w3pf8"]
 [ext_resource type="PackedScene" uid="uid://bus2emdyfs04w" path="res://scene/main_menu.tscn" id="2_4wdt3"]
 [ext_resource type="PackedScene" uid="uid://bhjhdfjt8assr" path="res://scene/settings.tscn" id="3_28kyq"]
 [ext_resource type="PackedScene" uid="uid://dogjahn0mqwcx" path="res://scene/how_to_play.tscn" id="4_8hyp3"]
+[ext_resource type="AudioStream" uid="uid://c4565ylgva2lr" path="res://assets/audio/music/bag-of-rubber-bands-342985.mp3" id="5_8hyp3"]
 
 [node name="SceneHandler" type="Node"]
 script = ExtResource("1_w3pf8")
@@ -15,3 +16,12 @@ offset_right = 1.0
 [node name="Settings" parent="." instance=ExtResource("3_28kyq")]
 
 [node name="HowToPlay" parent="." instance=ExtResource("4_8hyp3")]
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_8hyp3")
+autoplay = true
+bus = &"Music"
+
+[node name="SFXPlayer" type="AudioStreamPlayer" parent="."]
+autoplay = true
+bus = &"SFX"
