@@ -1,0 +1,90 @@
+[gd_scene load_steps=5 format=3 uid="uid://dogjahn0mqwcx"]
+
+[ext_resource type="Texture2D" uid="uid://c0dui71k3ceeq" path="res://assets/UI/background/cloud-pixel-background.jpg" id="1_yrpej"]
+[ext_resource type="FontFile" uid="uid://cuq6cgihu0i06" path="res://assets/UI/fonts/editundo.ttf" id="2_kiy6h"]
+[ext_resource type="Texture2D" uid="uid://ylmf3f531jhh" path="res://assets/UI/button/button_rectangle_depth_flat.png" id="3_xtexu"]
+[ext_resource type="Texture2D" uid="uid://crpsobwbvnmo0" path="res://assets/UI/button/button_rectangle_depth_gradient.png" id="4_042ic"]
+
+[node name="HowToPlay" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -384.0
+offset_top = -156.0
+offset_right = 384.0
+offset_bottom = 156.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_yrpej")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_kiy6h")
+theme_override_font_sizes/font_size = 100
+text = "How to play"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_kiy6h")
+theme_override_font_sizes/font_size = 100
+text = "lorem"
+horizontal_alignment = 1
+
+[node name="BackButton" type="TextureButton" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(350, 75)
+layout_mode = 2
+texture_normal = ExtResource("3_xtexu")
+texture_pressed = ExtResource("4_042ic")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/BackButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -93.0
+offset_top = -37.5
+offset_right = 90.0
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_kiy6h")
+theme_override_font_sizes/font_size = 55
+text = "back"
+horizontal_alignment = 1
+vertical_alignment = 1
