@@ -1,7 +1,6 @@
 extends Node
 
 func _ready():
-	
 	$MainMenu.visible = true
 	$Settings.visible = false
 	$HowToPlay.visible = false
@@ -22,10 +21,10 @@ func button_click_sfx_effect():
 func on_new_game_pressed():
 	button_click_sfx_effect()
 	get_node("MainMenu").queue_free()
-	var game_scene = load("res://scene/default.tscn").instantiate()
 	var new_song = preload("res://assets/audio/music/the-wandering-samurai-344699.mp3")
 	$MusicPlayer.stream = new_song
 	$MusicPlayer.play()
+	var game_scene = load("res://scene/GameScene.tscn").instantiate()
 	add_child(game_scene)
 	
 func navigate(node, node_to_go):
