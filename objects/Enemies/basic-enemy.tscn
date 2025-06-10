@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://cyc4kgm7npmok"]
+[gd_scene load_steps=12 format=3 uid="uid://cyc4kgm7npmok"]
 
 [ext_resource type="Script" uid="uid://bgsplkmrkmn0b" path="res://objects/Enemies/basic_enemie_move.gd" id="1_6yjls"]
+[ext_resource type="Script" uid="uid://b0ybsyqvfe332" path="res://objects/Enemies/enemy_logic.gd" id="2_27nva"]
 [ext_resource type="Texture2D" uid="uid://woxswc30mfuk" path="res://assets/sprites/characters/Premade_Character_04.png" id="2_74tpx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j4qmu"]
@@ -69,7 +70,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v05e8"]
-size = Vector2(64, 80)
+size = Vector2(51, 75)
 
 [node name="Basic-enemie" type="PathFollow2D"]
 rotates = false
@@ -77,6 +78,7 @@ script = ExtResource("1_6yjls")
 speed = 40
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("2_27nva")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 scale = Vector2(3, 3)
@@ -85,4 +87,27 @@ animation = &"walk-down"
 autoplay = "walk-down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-0.5, -0.5)
 shape = SubResource("RectangleShape2D_v05e8")
+
+[node name="HealthBar" type="ProgressBar" parent="CharacterBody2D"]
+offset_left = -25.0
+offset_top = -52.0
+offset_right = 25.0
+offset_bottom = -41.0
+value = 100.0
+show_percentage = false
+
+[node name="BackgroundBar" type="ColorRect" parent="CharacterBody2D/HealthBar"]
+layout_mode = 0
+offset_top = -1.0
+offset_right = 50.0
+offset_bottom = 11.0
+color = Color(0.730927, 0.0931526, 0.173251, 1)
+
+[node name="FillBar" type="ColorRect" parent="CharacterBody2D/HealthBar"]
+layout_mode = 0
+offset_top = -1.0
+offset_right = 50.0
+offset_bottom = 11.0
+color = Color(0.10759, 0.536198, 0, 1)
