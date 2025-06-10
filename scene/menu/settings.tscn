@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bhjhdfjt8assr"]
 
 [ext_resource type="Texture2D" uid="uid://c0dui71k3ceeq" path="res://assets/UI/background/cloud-pixel-background.jpg" id="1_ftovt"]
-[ext_resource type="Script" uid="uid://dqox6j6pggbj6" path="res://scene/settings.gd" id="1_wyye3"]
+[ext_resource type="Script" uid="uid://dqox6j6pggbj6" path="res://scene/menu/settings.gd" id="1_wyye3"]
 [ext_resource type="FontFile" uid="uid://cuq6cgihu0i06" path="res://assets/UI/fonts/editundo.ttf" id="2_wyye3"]
 [ext_resource type="Texture2D" uid="uid://ylmf3f531jhh" path="res://assets/UI/button/button_rectangle_depth_flat.png" id="3_keur6"]
 [ext_resource type="Texture2D" uid="uid://crpsobwbvnmo0" path="res://assets/UI/button/button_rectangle_depth_gradient.png" id="4_4pcrv"]

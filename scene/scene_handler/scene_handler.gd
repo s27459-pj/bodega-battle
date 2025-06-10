@@ -24,7 +24,7 @@ func on_new_game_pressed():
 	var new_song = preload("res://assets/audio/music/the-wandering-samurai-344699.mp3")
 	$MusicPlayer.stream = new_song
 	$MusicPlayer.play()
-	var game_scene = load("res://scene/GameScene.tscn").instantiate()
+	var game_scene = load("res://scene/level_main/GameScene.tscn").instantiate()
 	add_child(game_scene)
 	
 func navigate(node, node_to_go):
