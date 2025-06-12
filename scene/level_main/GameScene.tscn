@@ -1,9 +1,25 @@
-[gd_scene load_steps=3 format=3 uid="uid://dkx50masn7ffx"]
+[gd_scene load_steps=4 format=3 uid="uid://dkx50masn7ffx"]
 
 [ext_resource type="PackedScene" uid="uid://q2m5vf81jwqn" path="res://scene/level_main/level_main.tscn" id="1_cieuw"]
 [ext_resource type="Script" uid="uid://c4inmk81y15o" path="res://scene/level_main/gameScene.gd" id="1_g0iv5"]
+[ext_resource type="PackedScene" uid="uid://r3lmq4yt0woa" path="res://scene/menu/pause_menu.tscn" id="3_eow4k"]
 
 [node name="GameScene" type="Node2D"]
 script = ExtResource("1_g0iv5")
 
 [node name="LevelMain" parent="." instance=ExtResource("1_cieuw")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("3_eow4k")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 573.0
+offset_top = 338.0
+offset_right = 573.0
+offset_bottom = 338.0
+grow_horizontal = 1
+grow_vertical = 1
+size_flags_horizontal = 6
+size_flags_vertical = 6
