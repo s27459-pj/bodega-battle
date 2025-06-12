@@ -5,6 +5,21 @@
 [ext_resource type="Texture2D" uid="uid://ylmf3f531jhh" path="res://assets/UI/button/button_rectangle_depth_flat.png" id="2_bd44k"]
 [ext_resource type="Texture2D" uid="uid://crpsobwbvnmo0" path="res://assets/UI/button/button_rectangle_depth_gradient.png" id="3_77uqw"]
 
+[sub_resource type="Animation" id="Animation_77uqw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PanelContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_bd44k"]
 resource_name = "blur"
 length = 0.1
@@ -19,21 +34,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_77uqw"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("PanelContainer:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_o12qf"]
@@ -53,6 +53,7 @@ grow_vertical = 2
 script = ExtResource("1_bd44k")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
+visible = false
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8

@@ -7,8 +7,8 @@ func pause():
 
 func resume():
 	get_tree().paused = false
-	$PanelContainer.hide()
 	$AnimationPlayer.play_backwards("appear")
+	$PanelContainer.hide()
 
 func togglePause():
 	if get_tree().paused:
