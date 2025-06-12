@@ -2,10 +2,12 @@ extends Control
 
 func pause():
 	get_tree().paused = true
+	$PanelContainer.show()
 	$AnimationPlayer.play("appear")
 
 func resume():
 	get_tree().paused = false
+	$PanelContainer.hide()
 	$AnimationPlayer.play_backwards("appear")
 
 func togglePause():
