@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://q2m5vf81jwqn" path="res://scene/level_main/level_main.tscn" id="1_cieuw"]
 [ext_resource type="Script" uid="uid://c4inmk81y15o" path="res://scene/level_main/gameScene.gd" id="1_g0iv5"]
 [ext_resource type="PackedScene" uid="uid://r3lmq4yt0woa" path="res://scene/menu/pause_menu.tscn" id="3_eow4k"]
+[ext_resource type="PackedScene" uid="uid://b00yqug64m8w7" path="res://scene/ui/ui_health.tscn" id="3_eow4k"]
 
 [node name="GameScene" type="Node2D"]
 script = ExtResource("1_g0iv5")
@@ -23,3 +24,6 @@ grow_horizontal = 1
 grow_vertical = 1
 size_flags_horizontal = 6
 size_flags_vertical = 6
+
+[node name="UI-Health" parent="." instance=ExtResource("3_eow4k")]
+position = Vector2(24, 24)
