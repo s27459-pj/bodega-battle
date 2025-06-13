@@ -4,6 +4,7 @@ extends CharacterBody2D
 
 @onready var health_bar = $HealthBar
 @onready var fill_bar = $HealthBar/FillBar
+@onready var basic_enemie: PathFollow2D = $".."
 
 var current_health := max_health
 
@@ -21,12 +22,11 @@ func update_health_bar():
 	var ratio = float(current_health) / float(max_health)
 	fill_bar.size.x = ratio * health_bar.size.x
 
-
 func set_health(value):
 	current_health = clamp(value, 0, max_health)
 	update_health_bar()
 
-func _on_body_entered(body):
+func _on_body_entered(body): # to chyba nie działa dla tej encji w sensie nie ma takiej metody 
 	if body.is_in_group("turret_bullets"):
 		take_damage(body.damage)
 		body.queue_free()
