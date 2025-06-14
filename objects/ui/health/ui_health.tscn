@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://b00yqug64m8w7"]
+
+[ext_resource type="Script" uid="uid://cyntuiqornbwt" path="res://objects/ui/health/ui_health.gd" id="1_ij46x"]
+[ext_resource type="Texture2D" uid="uid://7a3gs36mmjyt" path="res://assets/UI/gameOverlay/hp_bar.png" id="1_k8afp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0td4j"]
+bg_color = Color(0.892778, 0.984589, 0.916133, 1)
+border_width_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k8afp"]
+bg_color = Color(0.141378, 0.571375, 0, 1)
+border_width_right = 3
+border_color = Color(0.114644, 0.443123, 0, 1)
+
+[node name="UI-Health" type="Node2D"]
+scale = Vector2(3, 3)
+script = ExtResource("1_ij46x")
+
+[node name="HpBar" type="Sprite2D" parent="."]
+scale = Vector2(3, 3)
+texture = ExtResource("1_k8afp")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = -61.0
+offset_top = -10.0
+offset_right = 89.0
+offset_bottom = 8.0
+theme_override_styles/background = SubResource("StyleBoxFlat_0td4j")
+theme_override_styles/fill = SubResource("StyleBoxFlat_k8afp")
+value = 20.0
+show_percentage = false
