@@ -1,21 +1,23 @@
-[gd_scene load_steps=5 format=3 uid="uid://dkx50masn7ffx"]
+[gd_scene load_steps=6 format=3 uid="uid://dkx50masn7ffx"]
 
 [ext_resource type="PackedScene" uid="uid://q2m5vf81jwqn" path="res://scene/level_main/level_main.tscn" id="1_cieuw"]
 [ext_resource type="Script" uid="uid://c4inmk81y15o" path="res://scene/level_main/gameScene.gd" id="1_g0iv5"]
 [ext_resource type="PackedScene" uid="uid://b00yqug64m8w7" path="res://objects/ui/health/ui_health.tscn" id="3_eow4k"]
-[ext_resource type="PackedScene" path="res://scene/menu/pause_menu.tscn" id="3_nn7n3"]
+[ext_resource type="PackedScene" uid="uid://r3lmq4yt0woa" path="res://scene/menu/pause_menu.tscn" id="3_nn7n3"]
+[ext_resource type="PackedScene" uid="uid://div1ree20fsjq" path="res://objects/ui/prep_phase_ui/prep_phase_ui.tscn" id="4_ylvg0"]
 
 [node name="GameScene" type="Node2D"]
 script = ExtResource("1_g0iv5")
 
-[node name="LevelMain" parent="." node_paths=PackedStringArray("UI_health") instance=ExtResource("1_cieuw")]
-UI_health = NodePath("../UI-Health")
+[node name="LevelMain" parent="." instance=ExtResource("1_cieuw")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="PauseMenu2" parent="CanvasLayer" instance=ExtResource("3_nn7n3")]
 
+[node name="Prep_phase_UI" parent="CanvasLayer" instance=ExtResource("4_ylvg0")]
+
 [node name="UI-Health" parent="." node_paths=PackedStringArray("game_scene") instance=ExtResource("3_eow4k")]
-position = Vector2(154, 32)
+position = Vector2(150, 31)
 scale = Vector2(1.5, 1.5)
 game_scene = NodePath("..")

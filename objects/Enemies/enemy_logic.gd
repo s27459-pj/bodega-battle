@@ -17,6 +17,7 @@ func take_damage(amount):
 	update_health_bar()
 	if current_health == 0:
 		queue_free()
+	
 
 func update_health_bar():
 	var ratio = float(current_health) / float(max_health)

@@ -3,6 +3,7 @@ extends Area2D
 @export var healthBar : Node2D
 
 func set_HP_ref(hp:Node2D):
+	print("chuj")
 	healthBar = hp
 
 func _ready() -> void:
