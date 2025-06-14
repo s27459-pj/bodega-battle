@@ -32,12 +32,22 @@ func _process(delta: float) -> void:
 			# TODO: Don't pause the game if we're in build mode
 			cancel_build_mode()
 
+	else:
+		if Input.is_action_just_pressed("ui_tower_start_build"):
+			if Input.is_key_pressed(KEY_1):
+				initiate_build_mode(gum_turret_scene)
+			# NOTE: Add more tower shortcuts from:
+			#       Project Settings >Input Map > ui_tower_start_build
+
 
 func _on_gum_turret_button_pressed() -> void:
 	initiate_build_mode(gum_turret_scene)
 
 
 func initiate_build_mode(scene: PackedScene) -> void:
+	if build_mode:
+		return
+
 	build_mode = true
 	building_scene = scene
 	overlay.set_tower_preview(building_scene, get_global_mouse_position())
