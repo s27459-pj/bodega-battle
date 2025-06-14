@@ -15,6 +15,7 @@ UI_health = NodePath("../UI-Health")
 
 [node name="PauseMenu2" parent="CanvasLayer" instance=ExtResource("3_nn7n3")]
 
-[node name="UI-Health" parent="." instance=ExtResource("3_eow4k")]
+[node name="UI-Health" parent="." node_paths=PackedStringArray("game_scene") instance=ExtResource("3_eow4k")]
 position = Vector2(154, 32)
 scale = Vector2(1.5, 1.5)
+game_scene = NodePath("..")

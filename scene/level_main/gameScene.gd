@@ -12,7 +12,7 @@ func startNextWave():
 	spawnEnemies(waveData)
 	
 func getWaveData():
-	var waveData = [["basic-enemy",2],["basic-enemy",2]] # [nazwa_encji, dalay spawnu następnej encji]
+	var waveData = [["basic-enemy",2],["basic-enemy",2],["basic-enemy",2],["basic-enemy",2],["basic-enemy",2],["basic-enemy",2],["basic-enemy",2],["basic-enemy",2],["basic-enemy",2],["basic-enemy",2],["basic-enemy",2],["basic-enemy",2]] # [nazwa_encji, dalay spawnu następnej encji]
 	return waveData
 
 func spawnEnemies(waveData):
