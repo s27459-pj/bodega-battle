@@ -44,6 +44,7 @@ _data = {
 
 [node name="PauseMenu" type="Control"]
 process_mode = 3
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -53,7 +54,6 @@ grow_vertical = 2
 script = ExtResource("1_bd44k")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
-visible = false
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8
