@@ -26,6 +26,9 @@ func _process(delta: float) -> void:
 func _on_resume_button_pressed() -> void:
 	resume()
 
+func _on_restart_button_pressed() -> void:
+	pass # TODO
+
 func _on_exit_button_pressed() -> void:
 	resume()
 	get_tree().reload_current_scene()
