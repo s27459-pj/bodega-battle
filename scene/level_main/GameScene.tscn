@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dkx50masn7ffx"]
+[gd_scene load_steps=6 format=3 uid="uid://dkx50masn7ffx"]
 
 [ext_resource type="PackedScene" uid="uid://q2m5vf81jwqn" path="res://scene/level_main/level_main.tscn" id="1_cieuw"]
 [ext_resource type="Script" uid="uid://c4inmk81y15o" path="res://scene/level_main/gameScene.gd" id="1_g0iv5"]
 [ext_resource type="PackedScene" uid="uid://b00yqug64m8w7" path="res://objects/ui/health/ui_health.tscn" id="3_eow4k"]
-[ext_resource type="PackedScene" path="res://scene/menu/pause_menu.tscn" id="3_nn7n3"]
+[ext_resource type="PackedScene" uid="uid://r3lmq4yt0woa" path="res://scene/menu/pause_menu.tscn" id="3_nn7n3"]
+[ext_resource type="PackedScene" uid="uid://c8qbv1nyqanfh" path="res://objects/ui/tower_placement/ui_tower_placement.tscn" id="5_ylvg0"]
 
 [node name="GameScene" type="Node2D"]
 script = ExtResource("1_g0iv5")
@@ -19,3 +20,8 @@ UI_health = NodePath("../UI-Health")
 position = Vector2(154, 32)
 scale = Vector2(1.5, 1.5)
 game_scene = NodePath("..")
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="UITowerPlacement" parent="CanvasLayer2" instance=ExtResource("5_ylvg0")]
+position = Vector2(433, 19)

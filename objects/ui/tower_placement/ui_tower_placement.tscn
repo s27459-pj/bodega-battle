@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8qbv1nyqanfh"]
+
+[ext_resource type="Texture2D" uid="uid://dyn7xm152kns2" path="res://assets/sprites/defences/gumball.png" id="1_71j57"]
+[ext_resource type="Script" uid="uid://ctfacorwqq5sm" path="res://objects/ui/tower_placement/ui_tower_placement.gd" id="1_wdltr"]
+
+[node name="UITowerPlacement" type="Node2D"]
+script = ExtResource("1_wdltr")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+
+[node name="GumTurretButton" type="TextureButton" parent="PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("1_71j57")
+
+[connection signal="pressed" from="PanelContainer/GumTurretButton" to="." method="_on_gum_turret_button_pressed"]
