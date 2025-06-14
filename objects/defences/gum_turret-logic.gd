@@ -22,6 +22,14 @@ func _process(delta):
 		shoot_timer = fire_rate
 
 
+func activate():
+	process_mode = Node.PROCESS_MODE_INHERIT
+
+
+func deactivate():
+	process_mode = Node.PROCESS_MODE_DISABLED
+
+
 func get_closest_enemy():
 	var enemies = get_tree().get_nodes_in_group("enemies")
 	var closest = null
@@ -36,6 +44,7 @@ func get_closest_enemy():
 			closest_dist = dist
 
 	return closest
+
 
 func shoot_at(enemy):
 	var direction = (enemy.global_position - global_position).normalized()
