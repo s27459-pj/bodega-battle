@@ -1,5 +1,7 @@
 extends Control
 
+@export var scene_handler: Node
+
 func pause():
 	get_tree().paused = true
 	$".".show()
@@ -27,7 +29,8 @@ func _on_resume_button_pressed() -> void:
 	resume()
 
 func _on_restart_button_pressed() -> void:
-	pass # TODO
+	resume()
+	get_tree().call_group("scene-handler", "restart_game")
 
 func _on_exit_button_pressed() -> void:
 	resume()
