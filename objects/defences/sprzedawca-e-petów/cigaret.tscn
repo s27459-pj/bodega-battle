@@ -196,6 +196,7 @@ animations = [{
 }]
 
 [node name="Cigaret" type="Node2D"]
+y_sort_enabled = true
 script = ExtResource("1_o7oma")
 fire_rate = 8.0
 ammo_scene = ExtResource("2_qggpk")
@@ -203,6 +204,8 @@ ammo_scene = ExtResource("2_qggpk")
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+y_sort_enabled = true
+position = Vector2(-1, -32)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_oom24")
 animation = &"idle_down"

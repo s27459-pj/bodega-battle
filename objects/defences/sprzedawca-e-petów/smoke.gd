@@ -2,7 +2,7 @@ extends Node2D
 
 var dir:float
 @export var speed= 50
-@export var hitDelay = 1
+@export var hitDelay = 1.0
 @export var lifetime = 4
 
 @onready var attack_delay: Timer = $attackDelay
