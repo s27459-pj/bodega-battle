@@ -3,9 +3,8 @@ extends Area2D
 @export var healthBar : Node2D
 
 func set_HP_ref(hp:Node2D):
-	if hp != null:
-		print(hp)
-		healthBar = hp
+	healthBar = hp
+	print(healthBar)
 
 func _ready() -> void:
 	add_to_group("Enemy_Won_Space")
