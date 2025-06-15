@@ -2,6 +2,7 @@ extends Node2D
 
 @export var fire_rate = 1.0
 @export var detection_radius = 250.0
+@export var animation_player: AnimationPlayer 
 
 @export var ammo_scene: PackedScene
 
@@ -45,6 +46,7 @@ func get_closest_enemy():
 
 
 func shoot_at(enemy):
+	animation_player.play("shoot") 
 	var direction = (enemy.global_position - global_position).normalized()
 	var ammo = ammo_scene.instantiate()
 	ammo.global_position = global_position
