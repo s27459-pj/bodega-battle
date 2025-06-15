@@ -57,10 +57,3 @@ text = "100"
 position = Vector2(-44, 16)
 scale = Vector2(0.0174442, 0.0164516)
 texture = ExtResource("3_7ehl6")
-
-[node name="ShopPanel" type="Panel" parent="."]
-layout_mode = 0
-offset_left = 3.0
-offset_top = 192.0
-offset_right = 293.0
-offset_bottom = 642.0

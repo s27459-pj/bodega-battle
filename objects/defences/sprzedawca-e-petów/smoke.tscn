@@ -91,7 +91,7 @@ size = Vector2(26, 26)
 z_index = 1
 scale = Vector2(3, 3)
 script = ExtResource("1_3rddr")
-speed = 10
+hitDelay = 0.1
 lifetime = 10
 
 [node name="attackDelay" type="Timer" parent="."]
