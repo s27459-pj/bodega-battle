@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://c8qbv1nyqanfh"]
 
-[ext_resource type="Texture2D" uid="uid://dyn7xm152kns2" path="res://assets/sprites/defences/gumball.png" id="1_71j57"]
 [ext_resource type="Script" uid="uid://ctfacorwqq5sm" path="res://objects/ui/tower_placement/ui_tower_placement.gd" id="1_wdltr"]
+[ext_resource type="Texture2D" uid="uid://3d7tlu5q05nm" path="res://assets/sprites/defences/gumball_ui.png" id="2_eo1td"]
 [ext_resource type="Texture2D" uid="uid://y8x45fg7t2q2" path="res://assets/sprites/defences/buch.png" id="3_vy1mm"]
 [ext_resource type="FontFile" uid="uid://cuq6cgihu0i06" path="res://assets/UI/fonts/editundo.ttf" id="4_vxfcy"]
 [ext_resource type="Texture2D" uid="uid://tobhrn6baoar" path="res://assets/UI/other/vecteezy_pixel-art-play-button_8506353.png" id="5_mukki"]
@@ -45,7 +45,7 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
-texture_normal = ExtResource("1_71j57")
+texture_normal = ExtResource("2_eo1td")
 
 [node name="VapeTurretButton" type="TextureButton" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2

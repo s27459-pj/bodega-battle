@@ -1,6 +1,7 @@
 extends PathFollow2D
 
 @export var speed = 200
+@export var push_back_on_hurt := 5
 var player_hp_reference :Node2D
 
 func _physics_process(delta: float) -> void:
@@ -8,6 +9,9 @@ func _physics_process(delta: float) -> void:
 	
 func move(delta: float) -> void:
 	progress += speed* delta
+
+func move_hurt() -> void:
+	progress -= push_back_on_hurt
 
 func add_player_health_ref(hp : Node2D):
 	player_hp_reference = hp 
