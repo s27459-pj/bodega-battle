@@ -28,7 +28,7 @@ game_scene = NodePath("../..")
 [node name="TowerPlacementOverlay" parent="UI" instance=ExtResource("5_yl6u3")]
 
 [node name="TowerPlacement" parent="UI" node_paths=PackedStringArray("overlay", "level") instance=ExtResource("5_ylvg0")]
-position = Vector2(461, 11)
+position = Vector2(62, 539)
 overlay = NodePath("../TowerPlacementOverlay")
 level = NodePath("../../LevelMain")
 

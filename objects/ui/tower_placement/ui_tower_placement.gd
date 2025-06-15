@@ -23,6 +23,8 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
+	if get_viewport().gui_get_hovered_control() != null:
+		return
 	if build_mode:
 		update_tower_preview()
 
