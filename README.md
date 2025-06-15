@@ -49,7 +49,7 @@
 - [x] Menu główne (start, instrukcja, wyjście) ✅
 - [ ] Instrukcja lub samouczek w grze -> ekran z tekstem i ikonkami po starcie ✅
 - [ ] Ekran wygranej i przegranej
-- [ ] Możliwość restartu gry
+- [x] Możliwość restartu gry
 - [ ] Wybór poziomu trudności
 - [ ] Przechowywanie stanu gry (np. zapis do pliku)
 - [x] Ekran pauzy
