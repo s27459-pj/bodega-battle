@@ -53,4 +53,3 @@
 - [ ] Wybór poziomu trudności ✅
 - [ ] Przechowywanie stanu gry (np. zapis do pliku) ?
 - [x] Ekran pauzy ✅
-
