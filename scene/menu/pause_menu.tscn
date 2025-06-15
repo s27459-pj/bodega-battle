@@ -44,6 +44,7 @@ _data = {
 
 [node name="PauseMenu" type="Control"]
 process_mode = 3
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -53,7 +54,6 @@ grow_vertical = 2
 script = ExtResource("1_bd44k")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
-visible = false
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8
@@ -118,6 +118,34 @@ text = "RESUME"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="RestartButton" type="TextureButton" parent="PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(350, 75)
+layout_mode = 2
+texture_normal = ExtResource("2_bd44k")
+texture_pressed = ExtResource("3_77uqw")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/RestartButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -93.0
+offset_top = -37.5
+offset_right = 90.0
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_f8nhd")
+theme_override_font_sizes/font_size = 55
+text = "RESTART"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="ExitButton" type="TextureButton" parent="PanelContainer/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(350, 75)
 layout_mode = 2
@@ -152,4 +180,5 @@ libraries = {
 }
 
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

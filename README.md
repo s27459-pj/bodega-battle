@@ -8,7 +8,7 @@
 
 ### Ogólne
 
-- [ ] Obsługa klawiatury (np. ruch, atak, skok) ✅ -> bindy na przyciski pod elementy ui 
+- [x] Obsługa klawiatury (np. ruch, atak, skok) ✅ -> bindy na przyciski pod elementy ui 
 - [x] Obsługa myszki (kliknięcia, przeciąganie, celowanie) ✅
 - [ ] Wykrywanie kolizji między obiektami ✅
 - [ ] Możliwość sterowania więcej niż jedną postacią❔-> no jakby wysyłamy unity czy to się liczy jako sterowanie więcej niż jedną postacią? według mnie tak.
@@ -49,7 +49,7 @@
 - [x] Menu główne (start, instrukcja, wyjście) ✅
 - [ ] Instrukcja lub samouczek w grze -> ekran z tekstem i ikonkami po starcie ✅
 - [ ] Ekran wygranej i przegranej
-- [ ] Możliwość restartu gry
+- [x] Możliwość restartu gry
 - [ ] Wybór poziomu trudności
 - [ ] Przechowywanie stanu gry (np. zapis do pliku)
 - [x] Ekran pauzy

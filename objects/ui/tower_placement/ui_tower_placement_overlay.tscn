@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://66x5ab5y1qap"]
+
+[ext_resource type="Script" uid="uid://caqdnfv2tklvl" path="res://objects/ui/tower_placement/ui_tower_placement_overlay.gd" id="1_fsmov"]
+
+[node name="UiTowerPlacementOverlay" type="Node"]
+script = ExtResource("1_fsmov")

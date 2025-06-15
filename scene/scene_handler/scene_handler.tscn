@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dogjahn0mqwcx" path="res://scene/menu/how_to_play.tscn" id="4_8hyp3"]
 [ext_resource type="AudioStream" uid="uid://c4565ylgva2lr" path="res://assets/audio/music/bag-of-rubber-bands-342985.mp3" id="5_8hyp3"]
 
-[node name="SceneHandler" type="Node"]
+[node name="SceneHandler" type="Node" groups=["scene-handler"]]
 script = ExtResource("1_w3pf8")
 
 [node name="MainMenu" parent="." instance=ExtResource("2_4wdt3")]

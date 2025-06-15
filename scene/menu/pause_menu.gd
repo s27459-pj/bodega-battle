@@ -1,14 +1,16 @@
 extends Control
 
+@export var scene_handler: Node
+
 func pause():
 	get_tree().paused = true
-	$PanelContainer.show()
+	$".".show()
 	$AnimationPlayer.play("appear")
 
 func resume():
 	get_tree().paused = false
 	$AnimationPlayer.play_backwards("appear")
-	$PanelContainer.hide()
+	$".".hide()
 
 func togglePause():
 	if get_tree().paused:
@@ -25,6 +27,10 @@ func _process(delta: float) -> void:
 
 func _on_resume_button_pressed() -> void:
 	resume()
+
+func _on_restart_button_pressed() -> void:
+	resume()
+	get_tree().call_group("scene-handler", "restart_game")
 
 func _on_exit_button_pressed() -> void:
 	resume()
