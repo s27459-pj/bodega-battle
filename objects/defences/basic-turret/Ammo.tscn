@@ -1,20 +1,22 @@
 [gd_scene load_steps=4 format=3 uid="uid://b8t5wttaarxcv"]
 
 [ext_resource type="Script" uid="uid://b0festkbcgjfp" path="res://objects/defences/basic-turret/ammo.gd" id="1_eu06r"]
-[ext_resource type="Texture2D" uid="uid://dyn7xm152kns2" path="res://assets/sprites/defences/gumball.png" id="2_tesr6"]
+[ext_resource type="Texture2D" uid="uid://r23vxn148e8l" path="res://assets/sprites/defences/gumball copy.png" id="2_irrus"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vp2ik"]
-size = Vector2(14.5455, 17.2308)
+size = Vector2(14.5455, 24.6154)
 
 [node name="Ammo" type="CharacterBody2D"]
 collision_layer = 2
 script = ExtResource("1_eu06r")
 
 [node name="Ammo2" type="Sprite2D" parent="."]
-scale = Vector2(1.375, 0.8125)
-texture = ExtResource("2_tesr6")
+self_modulate = Color(1, 1, 0.976471, 1)
+scale = Vector2(3, 3)
+texture = ExtResource("2_irrus")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2.98023e-07, 3.57628e-07)
+visible = false
+position = Vector2(2.98023e-08, 0)
 scale = Vector2(1.375, 0.8125)
 shape = SubResource("RectangleShape2D_vp2ik")

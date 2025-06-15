@@ -2,6 +2,14 @@ extends CharacterBody2D
 
 var dir:float
 var speed = 350
+var color : Color
+
+
+func _ready() -> void:
+	color.r = randf_range(0.0, 1.0)
+	color.g = randf_range(0.5, 1.0)
+	color.b = randf_range(0.0, 1.0)
+	modulate = color
 
 func _physics_process(delta: float):
 	velocity=Vector2(speed,0).rotated(dir)

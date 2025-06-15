@@ -134,6 +134,7 @@ theme_override_font_sizes/font_size = 35
 text = "Upgrade"
 
 [node name="MoneyLabel3" type="Label" parent="Upgrade_gum"]
+layout_mode = 0
 offset_left = 80.0
 offset_top = 30.0
 offset_right = 115.0
@@ -177,6 +178,7 @@ theme_override_font_sizes/font_size = 35
 text = "Upgrade"
 
 [node name="MoneyLabel3" type="Label" parent="Upgrade_vape"]
+layout_mode = 0
 offset_left = 80.0
 offset_top = 30.0
 offset_right = 115.0
