@@ -5,6 +5,8 @@ extends Control
 
 func _ready():
 	start_wave_button.pressed.connect(_on_start_wave_pressed)
+	GlobalVars.money_changed.connect(update_money)
+	update_money(GlobalVars.money)
 
 func _on_start_wave_pressed():
 	get_parent().get_parent().start_wave()

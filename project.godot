@@ -18,6 +18,10 @@ config/features=PackedStringArray("4.4", "GL Compatibility")
 
 buses/default_bus_layout="res://scene/default_bus_layout.tres"
 
+[autoload]
+
+GlobalVars="*res://scene/level_main/global_vars.gd"
+
 [display]
 
 window/size/mode=2

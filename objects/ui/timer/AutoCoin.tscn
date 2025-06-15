@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://8dh020r6ejjo"]
+
+[ext_resource type="Script" uid="uid://b06vitu234pru" path="res://objects/ui/timer/auto_coin.gd" id="1_mrpoa"]
+
+[node name="AutoCoin" type="Node"]
+script = ExtResource("1_mrpoa")
+
+[node name="CoinTimer" type="Timer" parent="."]

@@ -4,7 +4,6 @@ extends Area2D
 
 func set_HP_ref(hp:Node2D):
 	healthBar = hp
-	print(healthBar)
 
 func _ready() -> void:
 	add_to_group("Enemy_Won_Space")
