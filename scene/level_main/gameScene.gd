@@ -1,16 +1,14 @@
 extends Node2D
 
-@onready var ui_health: Node2D = $"UI-Health"
+@onready var ui_health: Node2D = $"UI/UI-Health"
 @onready var player_hit_trigger: Area2D = $LevelMain/PlayerHitTrigger
-@onready var UI_prep : Control = $CanvasLayer/Prep_phase_UI
+@onready var UI_prep : Control = $UI/Prep_phase_UI
 
-@export var UI_health: Node2D
 
 enum GameState { PREP, WAVE }
 var state: GameState = GameState.PREP
 
 func _ready() -> void:
-	print(UI_prep)
 	player_hit_trigger.set_HP_ref(ui_health)
 	UI_prep.update_money(100)
 	enter_prep_phase()
@@ -23,7 +21,7 @@ func start_wave():
 	state = GameState.WAVE
 	UI_prep.hide_prep_ui()
 	startNextWave()
-	player_hit_trigger.set_HP_ref(UI_health)
+	player_hit_trigger.set_HP_ref(ui_health)
 
 ## Enemy-Wave functions 
 func startNextWave():
