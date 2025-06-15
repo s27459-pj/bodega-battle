@@ -6,7 +6,6 @@ extends Node2D
 @export var ammo_scene: PackedScene
 
 var targetPosition : Vector2
-var ammo_path = preload("res://assets/sprites/defences/gumball.png")
 var shoot_timer := 0.0
 var target: Node2D = null
 
@@ -42,7 +41,6 @@ func get_closest_enemy():
 		if dist < closest_dist:
 			closest = enemy
 			closest_dist = dist
-
 	return closest
 
 

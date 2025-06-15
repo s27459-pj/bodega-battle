@@ -6,6 +6,7 @@
 [ext_resource type="TileSet" uid="uid://cy5mhdttx3dpf" path="res://assets/tileSets/decoration_tiles.tres" id="3_rjenp"]
 [ext_resource type="Texture2D" uid="uid://dwxh4rh2vure8" path="res://assets/sprites/characters/Premade_Character_17.png" id="3_xloln"]
 [ext_resource type="PackedScene" uid="uid://br1yi20n68g3p" path="res://objects/triggers/PlayerDamageTrigger/PlayerHitTrigger.tscn" id="6_xrx0r"]
+[ext_resource type="PackedScene" uid="uid://cj34p86dndnk7" path="res://objects/defences/sprzedawca-e-petów/cigaret.tscn" id="8_emggn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4yjey"]
 texture = ExtResource("1_grj8k")
@@ -1672,3 +1673,6 @@ curve = SubResource("Curve2D_voubo")
 
 [node name="PlayerHitTrigger" parent="." instance=ExtResource("6_xrx0r")]
 position = Vector2(-69, 262)
+
+[node name="Cigaret" parent="." instance=ExtResource("8_emggn")]
+position = Vector2(653, 483)
