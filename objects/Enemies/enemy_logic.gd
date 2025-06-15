@@ -16,6 +16,7 @@ func take_damage(amount):
 	current_health = max(current_health - amount, 0)
 	update_health_bar()
 	if current_health == 0:
+		GlobalVars.money += 10
 		queue_free()
 	
 
@@ -26,8 +27,3 @@ func update_health_bar():
 func set_health(value):
 	current_health = clamp(value, 0, max_health)
 	update_health_bar()
-
-func _on_body_entered(body): # to chyba nie działa dla tej encji w sensie nie ma takiej metody 
-	if body.is_in_group("turret_bullets"):
-		take_damage(body.damage)
-		body.queue_free()

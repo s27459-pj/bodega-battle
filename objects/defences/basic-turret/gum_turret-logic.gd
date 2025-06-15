@@ -1,7 +1,7 @@
 extends Node2D
 
-@export var fire_rate = 2.0
-@export var detection_radius = 300.0
+@export var fire_rate = 1.0
+@export var detection_radius = 250.0
 
 @export var ammo_scene: PackedScene
 
