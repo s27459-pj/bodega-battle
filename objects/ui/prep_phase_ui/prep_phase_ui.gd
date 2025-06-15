@@ -1,7 +1,6 @@
 extends Control
 
 @onready var start_wave_button = $StartWave
-@onready var shop_label = $ShopPanel
 @onready var money_label = $MoneyLabel
 
 func _ready():
@@ -15,8 +14,6 @@ func update_money(value: int):
 
 func show_prep_ui():
 	start_wave_button.visible = true
-	shop_label.visible = true
 
 func hide_prep_ui():
 	start_wave_button.visible = false
-	shop_label.visible = false

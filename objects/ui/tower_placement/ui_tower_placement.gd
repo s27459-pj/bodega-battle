@@ -12,7 +12,9 @@ var building_scene: PackedScene
 # Where we're building the tower
 var build_location: Vector2
 
-var gum_turret_scene: PackedScene = load("res://objects/defences/gum-turret.tscn")
+var gum_turret_scene: PackedScene = load("res://objects/defences/basic-turret/gum-turret.tscn")
+var vape_turret_scene: PackedScene = load("res://objects/defences/sprzedawca-e-petów/cigaret.tscn")
+
 var buildable_spots_tilemap: TileMapLayer
 
 
@@ -36,6 +38,8 @@ func _process(delta: float) -> void:
 		if Input.is_action_just_pressed("ui_tower_start_build"):
 			if Input.is_key_pressed(KEY_1):
 				initiate_build_mode(gum_turret_scene)
+			if Input.is_key_pressed(KEY_2):
+				initiate_build_mode(vape_turret_scene)
 			# NOTE: Add more tower shortcuts from:
 			#       Project Settings >Input Map > ui_tower_start_build
 
@@ -43,6 +47,8 @@ func _process(delta: float) -> void:
 func _on_gum_turret_button_pressed() -> void:
 	initiate_build_mode(gum_turret_scene)
 
+func _on_vape_turret_button_pressed() -> void:
+	initiate_build_mode(vape_turret_scene)
 
 func initiate_build_mode(scene: PackedScene) -> void:
 	if build_mode:
@@ -83,7 +89,7 @@ func verify_and_build() -> bool:
 
 	# TODO: Check if enough cash
 
-	var new_tower: Node2D = gum_turret_scene.instantiate()
+	var new_tower: Node2D = building_scene.instantiate()
 	new_tower.position = build_location
 	var turret_container: Node2D = level.get_node("Turrets")
 	turret_container.add_child(new_tower, true)

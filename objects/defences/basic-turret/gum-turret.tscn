@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://c4iiq85v5yxys"]
 
-[ext_resource type="Script" uid="uid://bqefudl30vnyu" path="res://objects/defences/gum_turret-logic.gd" id="1_akpdl"]
+[ext_resource type="Script" uid="uid://bqefudl30vnyu" path="res://objects/defences/basic-turret/gum_turret-logic.gd" id="1_akpdl"]
 [ext_resource type="Texture2D" uid="uid://dyn7xm152kns2" path="res://assets/sprites/defences/gumball.png" id="1_h0vw2"]
-[ext_resource type="PackedScene" uid="uid://b8t5wttaarxcv" path="res://objects/defences/Ammo.tscn" id="2_s3fyw"]
+[ext_resource type="PackedScene" uid="uid://b8t5wttaarxcv" path="res://objects/defences/basic-turret/Ammo.tscn" id="2_s3fyw"]
 
 [node name="Gum-turret" type="Node2D"]
 script = ExtResource("1_akpdl")

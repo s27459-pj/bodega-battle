@@ -10,7 +10,7 @@
 
 - [x] Obsługa klawiatury (np. ruch, atak, skok) ✅ -> bindy na przyciski pod elementy ui 
 - [x] Obsługa myszki (kliknięcia, przeciąganie, celowanie) ✅
-- [ ] Wykrywanie kolizji między obiektami ✅
+- [x] Wykrywanie kolizji między obiektami ✅
 - [ ] Możliwość sterowania więcej niż jedną postacią❔-> no jakby wysyłamy unity czy to się liczy jako sterowanie więcej niż jedną postacią? według mnie tak.
 - [ ] Tryb multiplayer lokalny (np. dwóch graczy na jednej klawiaturze) ❌ -> tu raczej nie widzę opcji dla tower defefense fajny byłby tryb vs. ale musiał nie da się go zrobić in real time bez obsługi kontrolera, ewentualnie turn based i tylko wysyłasz unity klawiaturą ale brzmi jak za dużo roboty 
 - [ ] Wybór postaci lub pojazdu przed grą ✅-> raczej nie ew. coś w stylu 2 postacie jedna dostaje więcej kasy ale ma mniej hp; albo 2 layouty planszy na której się bronisz jeden
@@ -32,8 +32,8 @@
 ### Grafika i animacja
 
 - [x] Animacje ruchu postaci (chód, skok, atak) -> bez skoku ✅
-- [ ] Efekty specjalne (np. eksplozje, błyski, cienie) -> chmura / wybuch habusz ✅
-- [ ] Interfejs użytkownika (UI): licznik punktów, pasek życia itp. ✅
+- [x] Efekty specjalne (np. eksplozje, błyski, cienie) -> chmura / wybuch habusz ✅
+- [x] Interfejs użytkownika (UI): licznik punktów, pasek życia itp. ✅
 
 ### Dźwięk i muzyka
 
@@ -48,9 +48,9 @@
 - [x] Ekran powitalny z tytułem gry ✅
 - [x] Menu główne (start, instrukcja, wyjście) ✅
 - [ ] Instrukcja lub samouczek w grze -> ekran z tekstem i ikonkami po starcie ✅
-- [ ] Ekran wygranej i przegranej
-- [x] Możliwość restartu gry
-- [ ] Wybór poziomu trudności
-- [ ] Przechowywanie stanu gry (np. zapis do pliku)
-- [x] Ekran pauzy
+- [ ] Ekran wygranej i przegranej ✅
+- [x] Możliwość restartu gry ✅
+- [ ] Wybór poziomu trudności ✅
+- [ ] Przechowywanie stanu gry (np. zapis do pliku) ?
+- [x] Ekran pauzy ✅
 

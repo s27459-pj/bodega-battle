@@ -20,13 +20,13 @@ position = Vector2(154, 32)
 scale = Vector2(1.5, 1.5)
 game_scene = NodePath("../..")
 
+[node name="Prep_phase_UI" parent="UI" instance=ExtResource("7_jiwvr")]
+
 [node name="TowerPlacementOverlay" parent="UI" instance=ExtResource("5_yl6u3")]
 
 [node name="TowerPlacement" parent="UI" node_paths=PackedStringArray("overlay", "level") instance=ExtResource("5_ylvg0")]
-position = Vector2(433, 19)
+position = Vector2(629, 12)
 overlay = NodePath("../TowerPlacementOverlay")
 level = NodePath("../../LevelMain")
 
 [node name="PauseMenu" parent="UI" instance=ExtResource("3_nn7n3")]
-
-[node name="Prep_phase_UI" parent="UI" instance=ExtResource("7_jiwvr")]
