@@ -1647,7 +1647,6 @@ scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_rb3wk")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.354734
 
 [node name="Decoration" type="TileMapLayer" parent="TileMap"]
 scale = Vector2(3, 3)

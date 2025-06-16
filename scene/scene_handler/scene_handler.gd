@@ -21,10 +21,14 @@ func _ready():
 	$MainMenu/MarginContainer/VBoxContainer/SettingsButton.pressed.connect(func(): navigate("MainMenu", "Settings"))
 	$MainMenu/MarginContainer/VBoxContainer/HowToPlayButton.pressed.connect(func(): navigate("MainMenu", "HowToPlay"))
 	
-	$DifficultySelect/MarginContainer/VBoxContainer/EasyButton.pressed.connect(func(): start_new_game(Difficulty.EASY))
-	$DifficultySelect/MarginContainer/VBoxContainer/NormalButton.pressed.connect(func(): start_new_game(Difficulty.NORMAL))
-	$DifficultySelect/MarginContainer/VBoxContainer/HardButton.pressed.connect(func(): start_new_game(Difficulty.HARD))
-	$DifficultySelect/MarginContainer/VBoxContainer/BackButton.pressed.connect(func(): navigate("DifficultySelect", "MainMenu"))
+	$DifficultySelect/MarginContainer/CharacterSelectContainer/Character1Button.pressed.connect(func(): select_character(1))
+	$DifficultySelect/MarginContainer/CharacterSelectContainer/Character2Button.pressed.connect(func(): select_character(2))
+	$DifficultySelect/MarginContainer/CharacterSelectContainer/BackButton.pressed.connect(func(): navigate("DifficultySelect", "MainMenu"))
+
+	$DifficultySelect/MarginContainer/DifficultySelectContainer/EasyButton.pressed.connect(func(): start_new_game(Difficulty.EASY))
+	$DifficultySelect/MarginContainer/DifficultySelectContainer/NormalButton.pressed.connect(func(): start_new_game(Difficulty.NORMAL))
+	$DifficultySelect/MarginContainer/DifficultySelectContainer/HardButton.pressed.connect(func(): start_new_game(Difficulty.HARD))
+	$DifficultySelect/MarginContainer/DifficultySelectContainer/BackButton.pressed.connect(func(): select_difficulty_cancel())
 
 	$Settings/MarginContainer/VBoxContainer/BackButton.pressed.connect(func(): navigate("Settings", "MainMenu"))
 	$Settings/MarginContainer/VBoxContainer/VBoxContainer/Apply.pressed.connect(func(): button_click_sfx())
@@ -35,10 +39,20 @@ func button_click_sfx():
 	$SFXPlayer.stream = click_sfx
 	$SFXPlayer.play()
 
+func select_character(idx: int):
+	$DifficultySelect/MarginContainer/CharacterSelectContainer.visible = false
+	$DifficultySelect/MarginContainer/DifficultySelectContainer.visible = true
+	pass
+
+func select_difficulty_cancel():
+	$DifficultySelect/MarginContainer/CharacterSelectContainer.visible = true
+	$DifficultySelect/MarginContainer/DifficultySelectContainer.visible = false
+
 func start_new_game(difficulty: Difficulty):
 	if difficulty == Difficulty.EASY:
 		GlobalVars.enemy_damage_multiplier = 0.8
 		GlobalVars.turret_damage_multiplier = 1.1
+		# TODO: Starting money and HP should be modulated by a character select, not difficulty
 		GlobalVars.starting_money = 600
 	elif difficulty == Difficulty.NORMAL:
 		GlobalVars.enemy_damage_multiplier = 1.0

@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://d053nfo8m8tdg"]
+[gd_scene load_steps=26 format=3 uid="uid://d053nfo8m8tdg"]
 
 [ext_resource type="Texture2D" uid="uid://c0dui71k3ceeq" path="res://assets/UI/background/cloud-pixel-background.jpg" id="2_ssp08"]
 [ext_resource type="FontFile" uid="uid://cuq6cgihu0i06" path="res://assets/UI/fonts/editundo.ttf" id="3_3vu0k"]
 [ext_resource type="Texture2D" uid="uid://ylmf3f531jhh" path="res://assets/UI/button/button_rectangle_depth_flat.png" id="4_sqids"]
 [ext_resource type="Texture2D" uid="uid://crpsobwbvnmo0" path="res://assets/UI/button/button_rectangle_depth_gradient.png" id="5_oruyx"]
+[ext_resource type="Texture2D" uid="uid://dwxh4rh2vure8" path="res://assets/sprites/characters/Premade_Character_17.png" id="5_ssp08"]
 
 [sub_resource type="GDScript" id="GDScript_turkl"]
 script/source = "extends Control
@@ -24,6 +25,145 @@ func _on_hard_button_pressed() -> void:
 func start_game() -> void:
 	pass
 "
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_voubo"]
+atlas = ExtResource("5_ssp08")
+region = Rect2(0, 168, 16, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_13x4j"]
+atlas = ExtResource("5_ssp08")
+region = Rect2(16, 168, 16, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g065u"]
+atlas = ExtResource("5_ssp08")
+region = Rect2(32, 168, 16, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tf2dx"]
+atlas = ExtResource("5_ssp08")
+region = Rect2(48, 168, 16, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3tbk6"]
+atlas = ExtResource("5_ssp08")
+region = Rect2(64, 168, 16, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ghgjt"]
+atlas = ExtResource("5_ssp08")
+region = Rect2(80, 168, 16, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mmip0"]
+atlas = ExtResource("5_ssp08")
+region = Rect2(0, 200, 16, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h60d6"]
+atlas = ExtResource("5_ssp08")
+region = Rect2(16, 200, 16, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4axny"]
+atlas = ExtResource("5_ssp08")
+region = Rect2(32, 200, 16, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tbqmt"]
+atlas = ExtResource("5_ssp08")
+region = Rect2(48, 200, 16, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p2i4f"]
+atlas = ExtResource("5_ssp08")
+region = Rect2(64, 200, 16, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_csxgi"]
+atlas = ExtResource("5_ssp08")
+region = Rect2(80, 200, 16, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbxjb"]
+atlas = ExtResource("5_ssp08")
+region = Rect2(96, 200, 16, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jiyeq"]
+atlas = ExtResource("5_ssp08")
+region = Rect2(112, 200, 16, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y5p0k"]
+atlas = ExtResource("5_ssp08")
+region = Rect2(128, 200, 16, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_saqle"]
+atlas = ExtResource("5_ssp08")
+region = Rect2(144, 200, 16, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hr0pn"]
+atlas = ExtResource("5_ssp08")
+region = Rect2(160, 200, 16, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j81f6"]
+atlas = ExtResource("5_ssp08")
+region = Rect2(176, 200, 16, 25)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3vu0k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_voubo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_13x4j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g065u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tf2dx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3tbk6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ghgjt")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mmip0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h60d6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4axny")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tbqmt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p2i4f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_csxgi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jbxjb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jiyeq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y5p0k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_saqle")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hr0pn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j81f6")
+}],
+"loop": true,
+"name": &"phone",
+"speed": 10.0
+}]
 
 [node name="DifficultySelect" type="Control"]
 layout_mode = 3
@@ -59,22 +199,22 @@ theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 50
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="CharacterSelectContainer" type="VBoxContainer" parent="MarginContainer"]
 custom_minimum_size = Vector2(500, 500)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 30
 alignment = 1
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="MarginContainer/CharacterSelectContainer"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_3vu0k")
 theme_override_font_sizes/font_size = 100
-text = "Select Difficulty"
+text = "Select Character"
 horizontal_alignment = 1
 
-[node name="EasyButton" type="TextureButton" parent="MarginContainer/VBoxContainer"]
+[node name="Character1Button" type="TextureButton" parent="MarginContainer/CharacterSelectContainer"]
 custom_minimum_size = Vector2(350, 75)
 layout_mode = 2
 texture_normal = ExtResource("4_sqids")
@@ -82,7 +222,118 @@ texture_pressed = ExtResource("5_oruyx")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/EasyButton"]
+[node name="Label" type="Label" parent="MarginContainer/CharacterSelectContainer/Character1Button"]
+layout_mode = 2
+offset_left = 247.0
+offset_top = 13.0
+offset_right = 536.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_3vu0k")
+theme_override_font_sizes/font_size = 55
+text = "Character 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cashier" type="AnimatedSprite2D" parent="MarginContainer/CharacterSelectContainer/Character1Button"]
+position = Vector2(38, 37)
+scale = Vector2(2.65625, 2.65625)
+sprite_frames = SubResource("SpriteFrames_3vu0k")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Character2Button" type="TextureButton" parent="MarginContainer/CharacterSelectContainer"]
+custom_minimum_size = Vector2(350, 75)
+layout_mode = 2
+texture_normal = ExtResource("4_sqids")
+texture_pressed = ExtResource("5_oruyx")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="MarginContainer/CharacterSelectContainer/Character2Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -93.0
+offset_top = -37.5
+offset_right = 90.0
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_3vu0k")
+theme_override_font_sizes/font_size = 55
+text = "Character 2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cashier" type="AnimatedSprite2D" parent="MarginContainer/CharacterSelectContainer/Character2Button"]
+position = Vector2(38, 37)
+scale = Vector2(2.65625, 2.65625)
+sprite_frames = SubResource("SpriteFrames_3vu0k")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.232055
+
+[node name="BackButton" type="TextureButton" parent="MarginContainer/CharacterSelectContainer"]
+custom_minimum_size = Vector2(350, 75)
+layout_mode = 2
+texture_normal = ExtResource("4_sqids")
+texture_pressed = ExtResource("5_oruyx")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="MarginContainer/CharacterSelectContainer/BackButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -93.0
+offset_top = -37.5
+offset_right = 90.0
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_3vu0k")
+theme_override_font_sizes/font_size = 55
+text = "Back"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DifficultySelectContainer" type="VBoxContainer" parent="MarginContainer"]
+visible = false
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/DifficultySelectContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_3vu0k")
+theme_override_font_sizes/font_size = 100
+text = "Select Difficulty"
+horizontal_alignment = 1
+
+[node name="EasyButton" type="TextureButton" parent="MarginContainer/DifficultySelectContainer"]
+custom_minimum_size = Vector2(350, 75)
+layout_mode = 2
+texture_normal = ExtResource("4_sqids")
+texture_pressed = ExtResource("5_oruyx")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="MarginContainer/DifficultySelectContainer/EasyButton"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -102,7 +353,7 @@ text = "Easy"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="NormalButton" type="TextureButton" parent="MarginContainer/VBoxContainer"]
+[node name="NormalButton" type="TextureButton" parent="MarginContainer/DifficultySelectContainer"]
 custom_minimum_size = Vector2(350, 75)
 layout_mode = 2
 texture_normal = ExtResource("4_sqids")
@@ -110,7 +361,7 @@ texture_pressed = ExtResource("5_oruyx")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/NormalButton"]
+[node name="Label" type="Label" parent="MarginContainer/DifficultySelectContainer/NormalButton"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -130,7 +381,7 @@ text = "Normal"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HardButton" type="TextureButton" parent="MarginContainer/VBoxContainer"]
+[node name="HardButton" type="TextureButton" parent="MarginContainer/DifficultySelectContainer"]
 custom_minimum_size = Vector2(350, 75)
 layout_mode = 2
 texture_normal = ExtResource("4_sqids")
@@ -138,7 +389,7 @@ texture_pressed = ExtResource("5_oruyx")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HardButton"]
+[node name="Label" type="Label" parent="MarginContainer/DifficultySelectContainer/HardButton"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -158,7 +409,7 @@ text = "Hard"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="BackButton" type="TextureButton" parent="MarginContainer/VBoxContainer"]
+[node name="BackButton" type="TextureButton" parent="MarginContainer/DifficultySelectContainer"]
 custom_minimum_size = Vector2(350, 75)
 layout_mode = 2
 texture_normal = ExtResource("4_sqids")
@@ -166,7 +417,7 @@ texture_pressed = ExtResource("5_oruyx")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/BackButton"]
+[node name="Label" type="Label" parent="MarginContainer/DifficultySelectContainer/BackButton"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
