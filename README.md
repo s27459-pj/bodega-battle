@@ -41,7 +41,7 @@
 - [x] Efekty dźwiękowe (skoki, uderzenia, wybuchy) -> stock z neta ✅
 - [x] Różne dźwięki w zależności od sytuacji (np. inna muzyka w menu) -> muzyka ścisza się jeśli przegrasz ✅
 - [x] Możliwość włączenia/wyłączenia dźwięku -> przycisk w menu ✅
-- [ ] Dynamiczne zmiany muzyki (np. podczas walki) ❌ 
+- [x] Dynamiczne zmiany muzyki (np. podczas walki) ✅ 
 
 ### Struktura gry
 
