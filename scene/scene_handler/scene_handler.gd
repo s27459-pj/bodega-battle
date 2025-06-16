@@ -4,18 +4,30 @@ var game_scene_node: Node2D = null
 
 var click_sfx = preload("res://assets/audio/sound_effects/coin-collect-retro-8-bit-sound-effect-145251.mp3")
 
+enum Difficulty {
+	EASY,
+	NORMAL,
+	HARD,
+}
+
 func _ready():
 	$MainMenu.visible = true
+	$DifficultySelect.visible = false
 	$Settings.visible = false
 	$HowToPlay.visible = false
 
-	$MainMenu/MarginContainer/VBoxContainer/PlayButton.pressed.connect(on_new_game_pressed)
+	$MainMenu/MarginContainer/VBoxContainer/PlayButton.pressed.connect(func(): navigate("MainMenu", "DifficultySelect"))
 	$MainMenu/MarginContainer/VBoxContainer/ExitButton.pressed.connect(on_exit_pressed)
 	$MainMenu/MarginContainer/VBoxContainer/SettingsButton.pressed.connect(func(): navigate("MainMenu", "Settings"))
 	$MainMenu/MarginContainer/VBoxContainer/HowToPlayButton.pressed.connect(func(): navigate("MainMenu", "HowToPlay"))
+	
+	$DifficultySelect/MarginContainer/VBoxContainer/EasyButton.pressed.connect(func(): start_new_game(Difficulty.EASY))
+	$DifficultySelect/MarginContainer/VBoxContainer/NormalButton.pressed.connect(func(): start_new_game(Difficulty.NORMAL))
+	$DifficultySelect/MarginContainer/VBoxContainer/HardButton.pressed.connect(func(): start_new_game(Difficulty.HARD))
+	$DifficultySelect/MarginContainer/VBoxContainer/BackButton.pressed.connect(func(): navigate("DifficultySelect", "MainMenu"))
 
 	$Settings/MarginContainer/VBoxContainer/BackButton.pressed.connect(func(): navigate("Settings", "MainMenu"))
-	$Settings/MarginContainer/VBoxContainer/VBoxContainer/Apply.pressed.connect(func():  button_click_sfx())
+	$Settings/MarginContainer/VBoxContainer/VBoxContainer/Apply.pressed.connect(func(): button_click_sfx())
 
 	$HowToPlay/MarginContainer/VBoxContainer/BackButton.pressed.connect(func(): navigate("HowToPlay", "MainMenu"))
 
@@ -23,9 +35,23 @@ func button_click_sfx():
 	$SFXPlayer.stream = click_sfx
 	$SFXPlayer.play()
 
-func on_new_game_pressed():
+func start_new_game(difficulty: Difficulty):
+	if difficulty == Difficulty.EASY:
+		GlobalVars.enemy_damage_multiplier = 0.8
+		GlobalVars.turret_damage_multiplier = 1.1
+		GlobalVars.starting_money = 600
+	elif difficulty == Difficulty.NORMAL:
+		GlobalVars.enemy_damage_multiplier = 1.0
+		GlobalVars.turret_damage_multiplier = 1.0
+		GlobalVars.starting_money = 500
+	elif difficulty == Difficulty.HARD:
+		GlobalVars.enemy_damage_multiplier = 1.2
+		GlobalVars.turret_damage_multiplier = 0.9
+		GlobalVars.starting_money = 400
+
 	button_click_sfx()
 	$MainMenu.queue_free()
+	$DifficultySelect.queue_free()
 	$Settings.queue_free()
 	$HowToPlay.queue_free()
 	load_new_game()
@@ -48,10 +74,10 @@ func restart_game():
 	unload_game()
 	load_new_game()
 
-func navigate(node, node_to_go):
+func navigate(node_from, node_to):
 	button_click_sfx()
-	get_node(node).visible = false
-	get_node(node_to_go).visible = true
+	get_node(node_from).visible = false
+	get_node(node_to).visible = true
 
 func on_exit_pressed():
 	button_click_sfx()
