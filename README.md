@@ -50,6 +50,6 @@
 - [ ] Instrukcja lub samouczek w grze -> ekran z tekstem i ikonkami po starcie ✅
 - [ ] Ekran wygranej i przegranej ✅
 - [x] Możliwość restartu gry ✅
-- [ ] Wybór poziomu trudności ✅
+- [x] Wybór poziomu trudności ✅
 - [ ] Przechowywanie stanu gry (np. zapis do pliku) ?
 - [x] Ekran pauzy ✅

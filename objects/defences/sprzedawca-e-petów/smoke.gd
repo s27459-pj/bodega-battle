@@ -31,7 +31,9 @@ func _on_attack_delay_timeout() -> void:
 	for e in overlapingBodies:
 		if e.is_in_group("enemies"):
 			if e.has_method("take_damage"):
-				e.take_damage(10)
+				var base_damage = 10
+				var damage = base_damage * GlobalVars.turret_damage_multiplier
+				e.take_damage(damage)
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "die":
