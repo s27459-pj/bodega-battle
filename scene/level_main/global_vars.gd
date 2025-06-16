@@ -4,7 +4,11 @@ extends Node
 @export var gum_turret_price = 100
 @export var vape_turret_price = 500
 
-# UI
+# Difficulty
+@export var enemy_damage_multiplier = 1.0
+@export var turret_damage_multiplier = 1.0
+
+# Money
 @export var starting_money = 500;
 @export var money = starting_money:
 	set(value):
@@ -14,3 +18,6 @@ extends Node
 signal money_changed
 
 @export var auto_coin_timer = 1.0
+
+# Health
+@export var starting_health = 100;

@@ -18,7 +18,9 @@ func _physics_process(delta: float):
 		var collider = collision.get_collider()
 		if collider.is_in_group("enemies"):
 			if collider.has_method("take_damage"):
-				collider.take_damage(10)
+				var base_damage = 10.0
+				var damage = base_damage * GlobalVars.turret_damage_multiplier
+				collider.take_damage(damage)
 				damage_SFX()
 			queue_free()
 
