@@ -40,9 +40,15 @@ func button_click_sfx():
 	$SFXPlayer.play()
 
 func select_character(idx: int):
+	if idx == 1:
+		GlobalVars.starting_money = 400
+		GlobalVars.starting_health = 150
+	elif idx == 2:
+		GlobalVars.starting_money = 600
+		GlobalVars.starting_health = 100
+
 	$DifficultySelect/MarginContainer/CharacterSelectContainer.visible = false
 	$DifficultySelect/MarginContainer/DifficultySelectContainer.visible = true
-	pass
 
 func select_difficulty_cancel():
 	$DifficultySelect/MarginContainer/CharacterSelectContainer.visible = true
@@ -52,16 +58,12 @@ func start_new_game(difficulty: Difficulty):
 	if difficulty == Difficulty.EASY:
 		GlobalVars.enemy_damage_multiplier = 0.8
 		GlobalVars.turret_damage_multiplier = 1.1
-		# TODO: Starting money and HP should be modulated by a character select, not difficulty
-		GlobalVars.starting_money = 600
 	elif difficulty == Difficulty.NORMAL:
 		GlobalVars.enemy_damage_multiplier = 1.0
 		GlobalVars.turret_damage_multiplier = 1.0
-		GlobalVars.starting_money = 500
 	elif difficulty == Difficulty.HARD:
 		GlobalVars.enemy_damage_multiplier = 1.2
 		GlobalVars.turret_damage_multiplier = 0.9
-		GlobalVars.starting_money = 400
 
 	button_click_sfx()
 	$MainMenu.queue_free()
