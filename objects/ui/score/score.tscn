@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://dh5lcxh0l6hok"]
+
+[ext_resource type="Texture2D" uid="uid://ntxk4l208ciu" path="res://assets/UI/gameOverlay/score bg.png" id="1_2i05l"]
+[ext_resource type="Script" uid="uid://3pfcm3puybon" path="res://objects/ui/score/score.gd" id="1_iuq4k"]
+[ext_resource type="FontFile" uid="uid://cuq6cgihu0i06" path="res://assets/UI/fonts/editundo.ttf" id="2_qcsk6"]
+
+[node name="Score" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_iuq4k")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(6, 6)
+texture = ExtResource("1_2i05l")
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_left = -128.0
+offset_top = -24.0
+offset_right = 120.0
+offset_bottom = 17.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.254902)
+theme_override_fonts/font = ExtResource("2_qcsk6")
+theme_override_font_sizes/font_size = 46
+text = "score: 0"
+vertical_alignment = 1

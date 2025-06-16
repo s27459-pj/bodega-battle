@@ -20,6 +20,7 @@ func take_damage(amount):
 	animation_player.play("hit")
 	if current_health == 0:
 		GlobalVars.money += 10
+		GlobalVars.score += 1
 		animation_player.stop()
 		animation_player.play("death")
 

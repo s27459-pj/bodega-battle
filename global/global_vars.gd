@@ -21,3 +21,12 @@ signal money_changed
 
 # Health
 @export var starting_health = 100;
+
+# Score
+@export var score : int = 0:
+	set(value):
+		score = value
+		score_changed.emit(score)
+	
+
+signal score_changed(score : int)
