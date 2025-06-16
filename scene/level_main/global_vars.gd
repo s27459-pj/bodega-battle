@@ -5,7 +5,8 @@ extends Node
 @export var vape_turret_price = 500
 
 # UI
-@export var money = 500:
+@export var starting_money = 500;
+@export var money = starting_money:
 	set(value):
 		money = value
 		money_changed.emit(money)
