@@ -47,19 +47,18 @@ func _process(delta: float) -> void:
 
 
 func _on_gum_turret_button_pressed() -> void:
-	if GlobalVars.money < GlobalVars.gum_turret_price:
-		return
-	else:
-		initiate_build_mode(gum_turret_scene)
+	initiate_build_mode(gum_turret_scene)
+
 
 func _on_vape_turret_button_pressed() -> void:
-	if GlobalVars.money < GlobalVars.vape_turret_price:
-		return
-	else:
-		initiate_build_mode(vape_turret_scene)
+	initiate_build_mode(vape_turret_scene)
+
 
 func initiate_build_mode(scene: PackedScene) -> void:
 	if build_mode:
+		return
+	
+	if GlobalVars.money < get_turret_cost(scene):
 		return
 
 	build_mode = true
@@ -96,6 +95,8 @@ func verify_and_build() -> bool:
 		return false
 		
 	var turret_cost = get_turret_cost(building_scene)
+	if GlobalVars.money < turret_cost:
+		return false
 
 	var new_tower: Node2D = building_scene.instantiate()
 	new_tower.position = build_location
@@ -117,6 +118,7 @@ func get_tile_coord_scaled(position: Vector2, tilemap: TileMapLayer) -> Vector2i
 		position.y / tilemap.scale.y
 	)
 	return tilemap.local_to_map(scaled_position)
+
 
 func get_turret_cost(scene: PackedScene) -> int:
 	if scene == gum_turret_scene:
