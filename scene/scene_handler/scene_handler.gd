@@ -36,6 +36,7 @@ func load_new_game():
 	$MusicPlayer.play()
 	game_scene_node = load("res://scene/level_main/GameScene.tscn").instantiate()
 	add_child(game_scene_node)
+	GlobalVars.money = GlobalVars.starting_money
 
 func unload_game():
 	$MusicPlayer.stream = null
