@@ -33,6 +33,8 @@ func _ready():
 	$Settings/MarginContainer/VBoxContainer/BackButton.pressed.connect(func(): navigate("Settings", "MainMenu"))
 	$Settings/MarginContainer/VBoxContainer/VBoxContainer/Apply.pressed.connect(func(): button_click_sfx())
 
+	$HowToPlay/MarginContainer/Left/ArrowLeft.pressed.connect(func(): button_click_sfx())
+	$HowToPlay/MarginContainer/Right/ArrowRight.pressed.connect(func(): button_click_sfx())
 	$HowToPlay/MarginContainer/Center/BackButton.pressed.connect(func(): navigate("HowToPlay", "MainMenu"))
 
 func button_click_sfx():
@@ -47,10 +49,12 @@ func select_character(idx: int):
 		GlobalVars.starting_money = 600
 		GlobalVars.starting_health = 100
 
+	button_click_sfx()
 	$DifficultySelect/MarginContainer/CharacterSelectContainer.visible = false
 	$DifficultySelect/MarginContainer/DifficultySelectContainer.visible = true
 
 func select_difficulty_cancel():
+	button_click_sfx()
 	$DifficultySelect/MarginContainer/CharacterSelectContainer.visible = true
 	$DifficultySelect/MarginContainer/DifficultySelectContainer.visible = false
 
