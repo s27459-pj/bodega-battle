@@ -51,5 +51,5 @@
 - [ ] Ekran wygranej i przegranej ✅
 - [x] Możliwość restartu gry ✅
 - [x] Wybór poziomu trudności ✅
-- [ ] Przechowywanie stanu gry (np. zapis do pliku) ?
+- [x] Przechowywanie stanu gry (np. zapis do pliku) ?
 - [x] Ekran pauzy ✅

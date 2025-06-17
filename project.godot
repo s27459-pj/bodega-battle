@@ -16,12 +16,13 @@ config/features=PackedStringArray("4.4", "GL Compatibility")
 
 [audio]
 
-buses/default_bus_layout="res://scene/default_bus_layout.tres"
+buses/default_bus_layout="uid://bca6gvjw050q5"
 
 [autoload]
 
 GlobalVars="*res://global/global_vars.gd"
 GlobalAudio="*res://global/global_audio.tscn"
+Settings="*res://global/settings.gd"
 
 [display]
 
