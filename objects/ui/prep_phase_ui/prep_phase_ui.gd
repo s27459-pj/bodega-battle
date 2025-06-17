@@ -10,9 +10,7 @@ func _ready():
 
 func _on_start_wave_pressed():
 	var new_song = preload("res://assets/audio/music/the-wandering-samurai-344699.mp3")
-	var root_music_player = get_tree().root.get_node("SceneHandler/MusicPlayer")
-	root_music_player.stream = new_song
-	root_music_player.play()
+	GlobalAudio.play_music(new_song)
 	get_parent().get_parent().start_wave()
 
 func update_money(value: int):

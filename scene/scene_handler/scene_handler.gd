@@ -2,8 +2,6 @@ extends Node
 
 var game_scene_node: Node2D = null
 
-var click_sfx = preload("res://assets/audio/sound_effects/coin-collect-retro-8-bit-sound-effect-145251.mp3")
-
 enum Difficulty {
 	EASY,
 	NORMAL,
@@ -31,15 +29,14 @@ func _ready():
 	$DifficultySelect/MarginContainer/DifficultySelectContainer/BackButton.pressed.connect(func(): select_difficulty_cancel())
 
 	$Settings/MarginContainer/VBoxContainer/BackButton.pressed.connect(func(): navigate("Settings", "MainMenu"))
-	$Settings/MarginContainer/VBoxContainer/VBoxContainer/Apply.pressed.connect(func(): button_click_sfx())
+	$Settings/MarginContainer/VBoxContainer/VBoxContainer/Apply.pressed.connect(GlobalAudio.button_click_sfx)
 
-	$HowToPlay/MarginContainer/Left/ArrowLeft.pressed.connect(func(): button_click_sfx())
-	$HowToPlay/MarginContainer/Right/ArrowRight.pressed.connect(func(): button_click_sfx())
+	$HowToPlay/MarginContainer/Left/ArrowLeft.pressed.connect(GlobalAudio.button_click_sfx)
+	$HowToPlay/MarginContainer/Right/ArrowRight.pressed.connect(GlobalAudio.button_click_sfx)
 	$HowToPlay/MarginContainer/Center/BackButton.pressed.connect(func(): navigate("HowToPlay", "MainMenu"))
-
-func button_click_sfx():
-	$SFXPlayer.stream = click_sfx
-	$SFXPlayer.play()
+	
+	var main_menu_song = preload("res://assets/audio/music/bag-of-rubber-bands-342985.mp3")
+	GlobalAudio.play_music(main_menu_song)
 
 func select_character(idx: int):
 	if idx == 1:
@@ -49,12 +46,12 @@ func select_character(idx: int):
 		GlobalVars.starting_money = 600
 		GlobalVars.starting_health = 100
 
-	button_click_sfx()
+	GlobalAudio.button_click_sfx()
 	$DifficultySelect/MarginContainer/CharacterSelectContainer.visible = false
 	$DifficultySelect/MarginContainer/DifficultySelectContainer.visible = true
 
 func select_difficulty_cancel():
-	button_click_sfx()
+	GlobalAudio.button_click_sfx()
 	$DifficultySelect/MarginContainer/CharacterSelectContainer.visible = true
 	$DifficultySelect/MarginContainer/DifficultySelectContainer.visible = false
 
@@ -69,7 +66,7 @@ func start_new_game(difficulty: Difficulty):
 		GlobalVars.enemy_damage_multiplier = 1.2
 		GlobalVars.turret_damage_multiplier = 0.9
 
-	button_click_sfx()
+	GlobalAudio.button_click_sfx()
 	$MainMenu.queue_free()
 	$DifficultySelect.queue_free()
 	$Settings.queue_free()
@@ -78,15 +75,13 @@ func start_new_game(difficulty: Difficulty):
 
 func load_new_game():
 	var new_song = preload("res://assets/audio/music/pixelated-dreams-328537.mp3")
-	$MusicPlayer.stream = new_song
-	$MusicPlayer.play()
+	GlobalAudio.play_music(new_song)
 	game_scene_node = load("res://scene/level_main/GameScene.tscn").instantiate()
 	add_child(game_scene_node)
 	GlobalVars.money = GlobalVars.starting_money
 
 func unload_game():
-	$MusicPlayer.stream = null
-	$MusicPlayer.stop()
+	GlobalAudio.stop_music()
 	game_scene_node.free()
 	game_scene_node = null
 
@@ -95,10 +90,10 @@ func restart_game():
 	load_new_game()
 
 func navigate(node_from, node_to):
-	button_click_sfx()
+	GlobalAudio.button_click_sfx()
 	get_node(node_from).visible = false
 	get_node(node_to).visible = true
 
 func on_exit_pressed():
-	button_click_sfx()
+	GlobalAudio.button_click_sfx()
 	get_tree().quit()

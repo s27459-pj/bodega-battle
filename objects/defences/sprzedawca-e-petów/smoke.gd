@@ -10,6 +10,8 @@ var dir:float
 @onready var hitbox: Area2D = $Area2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
+const damage_hit_sound = preload("res://assets/audio/sound_effects/bubble-pop-2-293341.mp3")
+
 func _ready() -> void:
 	attack_delay.wait_time = hitDelay
 	lifetime_t.wait_time = lifetime 
@@ -34,6 +36,8 @@ func _on_attack_delay_timeout() -> void:
 				var base_damage = 10
 				var damage = base_damage * GlobalVars.turret_damage_multiplier
 				e.take_damage(damage)
+				# TODO: Different sound
+				GlobalAudio.play_sfx(damage_hit_sound)
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "die":

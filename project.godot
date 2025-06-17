@@ -21,6 +21,7 @@ buses/default_bus_layout="res://scene/default_bus_layout.tres"
 [autoload]
 
 GlobalVars="*res://global/global_vars.gd"
+GlobalAudio="*res://global/global_audio.tscn"
 
 [display]
 
