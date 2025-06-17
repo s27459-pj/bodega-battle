@@ -11,7 +11,7 @@ func move(delta: float) -> void:
 	progress += speed* delta
 
 func move_hurt() -> void:
-	progress -= push_back_on_hurt
+	progress = max(0, progress-push_back_on_hurt) 
 
 func add_player_health_ref(hp : Node2D):
 	player_hp_reference = hp 
