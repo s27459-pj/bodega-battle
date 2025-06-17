@@ -232,7 +232,7 @@ _data = {
 &"shoot": SubResource("Animation_qggpk")
 }
 
-[node name="VapeTurret" type="Node2D" node_paths=PackedStringArray("animation_player")]
+[node name="VapeTurret" type="Node2D" node_paths=PackedStringArray("animation_player") groups=["vape-turret"]]
 y_sort_enabled = true
 script = ExtResource("1_hthp8")
 fire_rate = 8.0

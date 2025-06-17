@@ -65,7 +65,7 @@ _data = {
 &"shoot": SubResource("Animation_ih1e6")
 }
 
-[node name="GumTurret" type="Node2D" node_paths=PackedStringArray("animation_player")]
+[node name="GumTurret" type="Node2D" node_paths=PackedStringArray("animation_player") groups=["gum-turret"]]
 script = ExtResource("1_akpdl")
 animation_player = NodePath("AnimationPlayer")
 ammo_scene = ExtResource("2_s3fyw")
