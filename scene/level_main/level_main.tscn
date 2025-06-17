@@ -1671,4 +1671,4 @@ y_sort_enabled = true
 curve = SubResource("Curve2D_voubo")
 
 [node name="PlayerHitTrigger" parent="." instance=ExtResource("6_xrx0r")]
-position = Vector2(-69, 262)
+position = Vector2(-144, 256)
