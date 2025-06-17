@@ -10,7 +10,7 @@ func _ready() -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("enemies"):
-		body.queue_free()
+		body.take_damage(body.current_health)
 		if healthBar.has_method("damage_player"):
 			var base_damage = 10.0
 			var damage = base_damage * GlobalVars.enemy_damage_multiplier
