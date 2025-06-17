@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://dogjahn0mqwcx"]
 
-[ext_resource type="Script" path="res://scene/menu/how_to_play.gd" id="1_jib7x"]
+[ext_resource type="Script" uid="uid://dh7fw0jafwyjo" path="res://scene/menu/how_to_play.gd" id="1_jib7x"]
 [ext_resource type="Texture2D" uid="uid://c0dui71k3ceeq" path="res://assets/UI/background/cloud-pixel-background.jpg" id="1_yrpej"]
 [ext_resource type="FontFile" uid="uid://cuq6cgihu0i06" path="res://assets/UI/fonts/editundo.ttf" id="2_kiy6h"]
 [ext_resource type="Texture2D" uid="uid://c56y6fk32gcdb" path="res://assets/UI/other/turret_placement.png" id="3_8crkb"]
@@ -43,50 +43,14 @@ theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 50
 
-[node name="LeftSide" type="VBoxContainer" parent="MarginContainer"]
-custom_minimum_size = Vector2(300, 0)
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 4
-
-[node name="ArrowRight" type="TextureButton" parent="MarginContainer/LeftSide"]
-custom_minimum_size = Vector2(75, 75)
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-texture_normal = ExtResource("3_xtexu")
-texture_pressed = ExtResource("4_042ic")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="Label" type="Label" parent="MarginContainer/LeftSide/ArrowRight"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -93.0
-offset_top = -37.5
-offset_right = 90.0
-offset_bottom = 38.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_kiy6h")
-theme_override_font_sizes/font_size = 55
-text = "->"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="Center" type="VBoxContainer" parent="MarginContainer"]
 custom_minimum_size = Vector2(500, 500)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 30
 alignment = 1
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="MarginContainer/Center"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_kiy6h")
@@ -94,7 +58,7 @@ theme_override_font_sizes/font_size = 60
 text = "How to play"
 horizontal_alignment = 1
 
-[node name="HowToTitle" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="HowToTitle" type="Label" parent="MarginContainer/Center"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_kiy6h")
@@ -102,12 +66,12 @@ theme_override_font_sizes/font_size = 40
 text = "Turret placement"
 horizontal_alignment = 1
 
-[node name="Panel2" type="Panel" parent="MarginContainer/VBoxContainer"]
+[node name="Panel2" type="Panel" parent="MarginContainer/Center"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8crkb")
 
-[node name="HowToPhoto" type="TextureRect" parent="MarginContainer/VBoxContainer/Panel2"]
+[node name="HowToPhoto" type="TextureRect" parent="MarginContainer/Center/Panel2"]
 layout_mode = 0
 offset_left = 58.0
 offset_top = -22.0
@@ -116,7 +80,7 @@ offset_bottom = 1320.0
 scale = Vector2(0.16, 0.16)
 texture = ExtResource("3_8crkb")
 
-[node name="Description" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="Description" type="Label" parent="MarginContainer/Center"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -126,7 +90,7 @@ text = "On left corner of your screen there's panel with turrets. You can select
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="BackButton" type="TextureButton" parent="MarginContainer/VBoxContainer"]
+[node name="BackButton" type="TextureButton" parent="MarginContainer/Center"]
 custom_minimum_size = Vector2(350, 75)
 layout_mode = 2
 texture_normal = ExtResource("3_xtexu")
@@ -134,7 +98,7 @@ texture_pressed = ExtResource("4_042ic")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/BackButton"]
+[node name="Label" type="Label" parent="MarginContainer/Center/BackButton"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -154,13 +118,13 @@ text = "back"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="RightSide" type="VBoxContainer" parent="MarginContainer"]
+[node name="Left" type="VBoxContainer" parent="MarginContainer"]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
 
-[node name="ArrowLeft" type="TextureButton" parent="MarginContainer/RightSide"]
+[node name="ArrowLeft" type="TextureButton" parent="MarginContainer/Left"]
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 size_flags_horizontal = 8
@@ -170,7 +134,7 @@ texture_pressed = ExtResource("4_042ic")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="MarginContainer/RightSide/ArrowLeft"]
+[node name="Label" type="Label" parent="MarginContainer/Left/ArrowLeft"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -187,5 +151,41 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_kiy6h")
 theme_override_font_sizes/font_size = 55
 text = "<-"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Right" type="VBoxContainer" parent="MarginContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+
+[node name="ArrowRight" type="TextureButton" parent="MarginContainer/Right"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_normal = ExtResource("3_xtexu")
+texture_pressed = ExtResource("4_042ic")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="MarginContainer/Right/ArrowRight"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -93.0
+offset_top = -37.5
+offset_right = 90.0
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_kiy6h")
+theme_override_font_sizes/font_size = 55
+text = "->"
 horizontal_alignment = 1
 vertical_alignment = 1

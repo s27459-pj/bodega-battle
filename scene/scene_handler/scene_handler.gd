@@ -33,7 +33,7 @@ func _ready():
 	$Settings/MarginContainer/VBoxContainer/BackButton.pressed.connect(func(): navigate("Settings", "MainMenu"))
 	$Settings/MarginContainer/VBoxContainer/VBoxContainer/Apply.pressed.connect(func(): button_click_sfx())
 
-	$HowToPlay/MarginContainer/VBoxContainer/BackButton.pressed.connect(func(): navigate("HowToPlay", "MainMenu"))
+	$HowToPlay/MarginContainer/Center/BackButton.pressed.connect(func(): navigate("HowToPlay", "MainMenu"))
 
 func button_click_sfx():
 	$SFXPlayer.stream = click_sfx
