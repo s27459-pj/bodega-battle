@@ -107,6 +107,7 @@ func verify_and_build() -> bool:
 	buildable_spots_tilemap.set_cell(current_tile, -1)  # Erase the tile
 	
 	GlobalVars.money -= turret_cost
+	GlobalAudio.button_click_sfx()
 
 	return true
 
