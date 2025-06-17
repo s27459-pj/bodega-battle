@@ -22,6 +22,12 @@ signal money_changed
 # Health
 @export var starting_health = 100;
 
+# wave 
+@export var wave := 0;
+
+# enemy death 
+signal Enemy_Death 
+
 # Score
 @export var score : int = 0:
 	set(value):

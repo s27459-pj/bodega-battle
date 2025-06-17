@@ -18,6 +18,7 @@ scale = Vector2(6, 6)
 texture = ExtResource("1_2i05l")
 
 [node name="ScoreLabel" type="Label" parent="."]
+layout_mode = 0
 offset_left = -128.0
 offset_top = -24.0
 offset_right = 120.0
