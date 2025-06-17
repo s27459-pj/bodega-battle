@@ -1,5 +1,6 @@
 extends Node2D
 
+# Lower is faster
 @export var fire_rate = 1.0
 @export var detection_radius = 250.0
 @export var animation_player: AnimationPlayer 

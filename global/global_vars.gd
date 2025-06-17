@@ -1,8 +1,11 @@
 extends Node
 
-# Enemy
+# Defense Turrets
 @export var gum_turret_price = 100
+@export var gum_turret_upgrade_price = 1000
+
 @export var vape_turret_price = 500
+@export var vape_turret_upgrade_price = 2000
 
 # Difficulty
 @export var enemy_damage_multiplier = 1.0

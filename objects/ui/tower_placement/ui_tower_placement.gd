@@ -54,6 +54,16 @@ func _on_vape_turret_button_pressed() -> void:
 	initiate_build_mode(vape_turret_scene)
 
 
+func _on_upgrade_gum_turret_button_pressed() -> void:
+	if upgrade_turret(gum_turret_scene):
+		$UpgradeGumTurretButton.queue_free()
+
+
+func _on_upgrade_vape_turret_button_pressed() -> void:
+	if upgrade_turret(vape_turret_scene):
+		$UpgradeVapeTurretButton.queue_free()
+
+
 func initiate_build_mode(scene: PackedScene) -> void:
 	if build_mode:
 		return
@@ -112,6 +122,17 @@ func verify_and_build() -> bool:
 	return true
 
 
+func upgrade_turret(scene: PackedScene) -> bool:
+	var upgrade_cost = get_upgrade_cost(scene)
+	if GlobalVars.money < upgrade_cost:
+		return false
+
+	# TODO: Upgrade
+	GlobalAudio.button_click_sfx()
+
+	return true
+
+
 func get_tile_coord_scaled(position: Vector2, tilemap: TileMapLayer) -> Vector2i:
 	# Scale down coordinates to the original size of the tilemap
 	var scaled_position = Vector2(
@@ -124,8 +145,18 @@ func get_tile_coord_scaled(position: Vector2, tilemap: TileMapLayer) -> Vector2i
 func get_turret_cost(scene: PackedScene) -> int:
 	if scene == gum_turret_scene:
 		return GlobalVars.gum_turret_price
-	elif scene == vape_turret_scene:
+	if scene == vape_turret_scene:
 		return GlobalVars.vape_turret_price
-	else:
-		# default cost
-		return 100
+
+	# Default
+	return 100
+
+
+func get_upgrade_cost(scene: PackedScene) -> int:
+	if scene == gum_turret_scene:
+		return GlobalVars.gum_turret_upgrade_price
+	if scene == vape_turret_scene:
+		return GlobalVars.vape_turret_upgrade_price
+
+	# Default
+	return 1000
