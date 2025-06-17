@@ -8,10 +8,12 @@ extends CharacterBody2D
 @onready var animation_player: AnimationPlayer = $"../AnimationPlayer"
 
 var current_health := max_health
+signal enemy_death
 
 func _ready():
 	add_to_group("enemies")
 	update_health_bar()
+	add_user_signal("enemy_death")
 
 func take_damage(amount):
 	current_health = max(current_health - amount, 0)
@@ -20,6 +22,7 @@ func take_damage(amount):
 	animation_player.play("hit")
 	if current_health == 0:
 		GlobalVars.money += 10
+		GlobalVars.score += 1
 		animation_player.stop()
 		animation_player.play("death")
 
@@ -34,3 +37,4 @@ func set_health(value):
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "death":
 		queue_free()
+		GlobalVars.Enemy_Death.emit()
