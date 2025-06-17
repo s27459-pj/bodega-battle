@@ -26,6 +26,12 @@ game_scene = NodePath("../..")
 
 [node name="Prep_phase_UI" parent="UI" instance=ExtResource("7_jiwvr")]
 
+[node name="Score" parent="UI" instance=ExtResource("9_1gttt")]
+offset_left = 430.0
+offset_top = 615.0
+offset_right = 422.0
+offset_bottom = 631.0
+
 [node name="TowerPlacementOverlay" parent="UI" instance=ExtResource("5_yl6u3")]
 
 [node name="TowerPlacement" parent="UI" node_paths=PackedStringArray("overlay", "level") instance=ExtResource("5_ylvg0")]
@@ -34,9 +40,3 @@ overlay = NodePath("../TowerPlacementOverlay")
 level = NodePath("../../LevelMain")
 
 [node name="PauseMenu" parent="UI" instance=ExtResource("3_nn7n3")]
-
-[node name="Score" parent="UI" instance=ExtResource("9_1gttt")]
-offset_left = 430.0
-offset_top = 615.0
-offset_right = 422.0
-offset_bottom = 631.0

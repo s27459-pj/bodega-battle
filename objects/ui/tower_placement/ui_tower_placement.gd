@@ -12,10 +12,13 @@ var building_scene: PackedScene
 # Where we're building the tower
 var build_location: Vector2
 
-var gum_turret_scene: PackedScene = load("res://objects/defences/basic-turret/gum-turret.tscn")
-var vape_turret_scene: PackedScene = load("res://objects/defences/sprzedawca-e-petów/cigaret.tscn")
+var gum_turret_scene: PackedScene = load("res://objects/defences/gum-turret/gum-turret.tscn")
+var vape_turret_scene: PackedScene = load("res://objects/defences/vape-turret/vape-turret.tscn")
 
 var buildable_spots_tilemap: TileMapLayer
+
+var gum_turret_upgraded = false
+var vape_turret_upgraded = false
 
 
 func _ready() -> void:
@@ -52,6 +55,18 @@ func _on_gum_turret_button_pressed() -> void:
 
 func _on_vape_turret_button_pressed() -> void:
 	initiate_build_mode(vape_turret_scene)
+
+
+func _on_upgrade_gum_turret_button_pressed() -> void:
+	if upgrade_turret(gum_turret_scene):
+		gum_turret_upgraded = true
+		$UpgradeGumTurretButton.queue_free()
+
+
+func _on_upgrade_vape_turret_button_pressed() -> void:
+	if upgrade_turret(vape_turret_scene):
+		vape_turret_upgraded = true
+		$UpgradeVapeTurretButton.queue_free()
 
 
 func initiate_build_mode(scene: PackedScene) -> void:
@@ -100,6 +115,8 @@ func verify_and_build() -> bool:
 
 	var new_tower: Node2D = building_scene.instantiate()
 	new_tower.position = build_location
+	var fire_rate_multiplier = get_new_turret_fire_rate_multiplier(building_scene)
+	new_tower.fire_rate *= fire_rate_multiplier
 	var turret_container: Node2D = level.get_node("Turrets")
 	turret_container.add_child(new_tower, true)
 
@@ -107,6 +124,21 @@ func verify_and_build() -> bool:
 	buildable_spots_tilemap.set_cell(current_tile, -1)  # Erase the tile
 	
 	GlobalVars.money -= turret_cost
+	GlobalAudio.button_click_sfx()
+
+	return true
+
+
+func upgrade_turret(scene: PackedScene) -> bool:
+	var upgrade_cost = get_upgrade_cost(scene)
+	if GlobalVars.money < upgrade_cost:
+		return false
+
+	var node_group = get_upgrade_node_group(scene)
+	for i in get_tree().get_nodes_in_group(node_group):
+		i.fire_rate *= 0.7
+
+	GlobalVars.money -= upgrade_cost
 	GlobalAudio.button_click_sfx()
 
 	return true
@@ -124,8 +156,36 @@ func get_tile_coord_scaled(position: Vector2, tilemap: TileMapLayer) -> Vector2i
 func get_turret_cost(scene: PackedScene) -> int:
 	if scene == gum_turret_scene:
 		return GlobalVars.gum_turret_price
-	elif scene == vape_turret_scene:
+	if scene == vape_turret_scene:
 		return GlobalVars.vape_turret_price
-	else:
-		# default cost
-		return 100
+
+	# Default
+	return 100
+
+
+func get_upgrade_cost(scene: PackedScene) -> int:
+	if scene == gum_turret_scene:
+		return GlobalVars.gum_turret_upgrade_price
+	if scene == vape_turret_scene:
+		return GlobalVars.vape_turret_upgrade_price
+
+	# Default
+	return 1000
+
+
+func get_upgrade_node_group(scene: PackedScene) -> String:
+	if scene == gum_turret_scene:
+		return "gum-turret"
+	if scene == vape_turret_scene:
+		return "vape-turret"
+
+	return "unknown-turret"
+
+
+func get_new_turret_fire_rate_multiplier(scene: PackedScene) -> float:
+	if scene == gum_turret_scene and gum_turret_upgraded:
+		return 0.7
+	if scene == vape_turret_scene and vape_turret_upgraded:
+		return 0.7
+
+	return 1.0

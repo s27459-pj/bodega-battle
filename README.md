@@ -20,7 +20,7 @@
 - [x] System punktacji ✅ ->  np. `1000 - czas * stracone_hp`
 - [x] System żyć lub pasków energii ✅ -> hp
 - [x] Przeciwnicy z prostą AI (np. patrolowanie, pogoń, unikanie) ✅ -> najemnicy nasyłani przez przeciwnika 
-- [ ] Ulepszenia/bronie/power-upy ✅ -> najemnicy / fortyfikacje 
+- [x] Ulepszenia/bronie/power-upy ✅ -> najemnicy / fortyfikacje 
 - [ ] Zbieranie przedmiotów (np. monety, klucze) ✅ -> myśle ze można to podciągnąć pod automat i zabieranie coinów od przecinika 
 - [ ] Mechanika levelowania (np. coraz trudniejsi przeciwnicy) ✅ -> czas -> ai losuje więcej trudniejszych przeciwników 
 - [ ] Ograniczenie czasowe (odliczanie, czas na wykonanie zadania) ❔-> razem z System osiągnięć 

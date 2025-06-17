@@ -31,6 +31,11 @@ window/stretch/mode="viewport"
 mouse_cursor/custom_image="uid://1vjh52ga58x2"
 mouse_cursor/custom_image_hotspot=Vector2(5, 3)
 
+[global_group]
+
+vape-turret=""
+gum-turret=""
+
 [input]
 
 ui_accept={

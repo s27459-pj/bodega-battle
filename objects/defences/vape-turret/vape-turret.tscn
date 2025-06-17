@@ -1,103 +1,103 @@
 [gd_scene load_steps=32 format=3 uid="uid://cj34p86dndnk7"]
 
-[ext_resource type="Texture2D" uid="uid://bb81fonj5ejc2" path="res://assets/sprites/characters/Bob_idle_anim_16x16.png" id="1_br4qa"]
-[ext_resource type="Script" uid="uid://bqefudl30vnyu" path="res://objects/defences/basic-turret/gum_turret-logic.gd" id="1_o7oma"]
-[ext_resource type="PackedScene" uid="uid://b0ae1u8gg0h43" path="res://objects/defences/sprzedawca-e-petów/smoke.tscn" id="2_qggpk"]
+[ext_resource type="Script" uid="uid://bqefudl30vnyu" path="res://objects/defences/turret-logic.gd" id="1_hthp8"]
+[ext_resource type="PackedScene" uid="uid://b0ae1u8gg0h43" path="res://objects/defences/vape-turret/smoke.tscn" id="2_w31ak"]
+[ext_resource type="Texture2D" uid="uid://bb81fonj5ejc2" path="res://assets/sprites/characters/Bob_idle_anim_16x16.png" id="3_lx4gv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o7oma"]
-atlas = ExtResource("1_br4qa")
+atlas = ExtResource("3_lx4gv")
 region = Rect2(288, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qggpk"]
-atlas = ExtResource("1_br4qa")
+atlas = ExtResource("3_lx4gv")
 region = Rect2(304, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l58bt"]
-atlas = ExtResource("1_br4qa")
+atlas = ExtResource("3_lx4gv")
 region = Rect2(320, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pfx0j"]
-atlas = ExtResource("1_br4qa")
+atlas = ExtResource("3_lx4gv")
 region = Rect2(336, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i6tcy"]
-atlas = ExtResource("1_br4qa")
+atlas = ExtResource("3_lx4gv")
 region = Rect2(352, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ylecq"]
-atlas = ExtResource("1_br4qa")
+atlas = ExtResource("3_lx4gv")
 region = Rect2(368, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_quvxn"]
-atlas = ExtResource("1_br4qa")
+atlas = ExtResource("3_lx4gv")
 region = Rect2(192, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a1mt6"]
-atlas = ExtResource("1_br4qa")
+atlas = ExtResource("3_lx4gv")
 region = Rect2(208, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jk61a"]
-atlas = ExtResource("1_br4qa")
+atlas = ExtResource("3_lx4gv")
 region = Rect2(224, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jkuat"]
-atlas = ExtResource("1_br4qa")
+atlas = ExtResource("3_lx4gv")
 region = Rect2(240, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mw1i5"]
-atlas = ExtResource("1_br4qa")
+atlas = ExtResource("3_lx4gv")
 region = Rect2(256, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y0cwd"]
-atlas = ExtResource("1_br4qa")
+atlas = ExtResource("3_lx4gv")
 region = Rect2(272, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cvkqn"]
-atlas = ExtResource("1_br4qa")
+atlas = ExtResource("3_lx4gv")
 region = Rect2(0, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3c4ry"]
-atlas = ExtResource("1_br4qa")
+atlas = ExtResource("3_lx4gv")
 region = Rect2(16, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t856i"]
-atlas = ExtResource("1_br4qa")
+atlas = ExtResource("3_lx4gv")
 region = Rect2(32, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n37to"]
-atlas = ExtResource("1_br4qa")
+atlas = ExtResource("3_lx4gv")
 region = Rect2(48, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_visrd"]
-atlas = ExtResource("1_br4qa")
+atlas = ExtResource("3_lx4gv")
 region = Rect2(64, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3m4d1"]
-atlas = ExtResource("1_br4qa")
+atlas = ExtResource("3_lx4gv")
 region = Rect2(80, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1qx1j"]
-atlas = ExtResource("1_br4qa")
+atlas = ExtResource("3_lx4gv")
 region = Rect2(96, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1gwi5"]
-atlas = ExtResource("1_br4qa")
+atlas = ExtResource("3_lx4gv")
 region = Rect2(112, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q1ovj"]
-atlas = ExtResource("1_br4qa")
+atlas = ExtResource("3_lx4gv")
 region = Rect2(128, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vd18m"]
-atlas = ExtResource("1_br4qa")
+atlas = ExtResource("3_lx4gv")
 region = Rect2(144, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tpr5l"]
-atlas = ExtResource("1_br4qa")
+atlas = ExtResource("3_lx4gv")
 region = Rect2(160, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_08ma4"]
-atlas = ExtResource("1_br4qa")
+atlas = ExtResource("3_lx4gv")
 region = Rect2(176, 0, 16, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_oom24"]
@@ -195,6 +195,21 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Animation" id="Animation_l58bt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_qggpk"]
 resource_name = "shoot"
 length = 0.2
@@ -211,33 +226,18 @@ tracks/0/keys = {
 "values": [Vector2(1, 1), Vector2(0.9, 0.7), Vector2(1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_l58bt"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_l58bt"]
 _data = {
 &"RESET": SubResource("Animation_l58bt"),
 &"shoot": SubResource("Animation_qggpk")
 }
 
-[node name="Cigaret" type="Node2D" node_paths=PackedStringArray("animation_player")]
+[node name="VapeTurret" type="Node2D" node_paths=PackedStringArray("animation_player") groups=["vape-turret"]]
 y_sort_enabled = true
-script = ExtResource("1_o7oma")
+script = ExtResource("1_hthp8")
 fire_rate = 8.0
 animation_player = NodePath("AnimationPlayer")
-ammo_scene = ExtResource("2_qggpk")
+ammo_scene = ExtResource("2_w31ak")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 

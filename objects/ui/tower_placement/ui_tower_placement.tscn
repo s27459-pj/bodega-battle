@@ -106,7 +106,7 @@ position = Vector2(-10, 9)
 scale = Vector2(0.007, 0.007)
 texture = ExtResource("5_mukki")
 
-[node name="Upgrade_gum" type="TextureButton" parent="."]
+[node name="UpgradeGumTurretButton" type="TextureButton" parent="."]
 offset_left = -9.0
 offset_top = 67.0
 offset_right = 184.0
@@ -115,7 +115,7 @@ scale = Vector2(0.4, 0.4)
 texture_normal = ExtResource("6_eo1td")
 texture_pressed = ExtResource("7_3tldr")
 
-[node name="Label" type="Label" parent="Upgrade_gum"]
+[node name="Label" type="Label" parent="UpgradeGumTurretButton"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -133,7 +133,7 @@ theme_override_fonts/font = ExtResource("4_vxfcy")
 theme_override_font_sizes/font_size = 35
 text = "Upgrade"
 
-[node name="MoneyLabel3" type="Label" parent="Upgrade_gum"]
+[node name="MoneyLabel3" type="Label" parent="UpgradeGumTurretButton"]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 30.0
@@ -145,12 +145,12 @@ theme_override_fonts/font = ExtResource("4_vxfcy")
 theme_override_font_sizes/font_size = 20
 text = "1000"
 
-[node name="Sprite2D" type="Sprite2D" parent="Upgrade_gum/MoneyLabel3"]
+[node name="Sprite2D" type="Sprite2D" parent="UpgradeGumTurretButton/MoneyLabel3"]
 position = Vector2(-10, 9)
 scale = Vector2(0.007, 0.007)
 texture = ExtResource("5_mukki")
 
-[node name="Upgrade_vape" type="TextureButton" parent="."]
+[node name="UpgradeVapeTurretButton" type="TextureButton" parent="."]
 offset_left = 69.0
 offset_top = 67.0
 offset_right = 262.0
@@ -159,7 +159,7 @@ scale = Vector2(0.4, 0.4)
 texture_normal = ExtResource("6_eo1td")
 texture_pressed = ExtResource("7_3tldr")
 
-[node name="Label" type="Label" parent="Upgrade_vape"]
+[node name="Label" type="Label" parent="UpgradeVapeTurretButton"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -177,7 +177,7 @@ theme_override_fonts/font = ExtResource("4_vxfcy")
 theme_override_font_sizes/font_size = 35
 text = "Upgrade"
 
-[node name="MoneyLabel3" type="Label" parent="Upgrade_vape"]
+[node name="MoneyLabel3" type="Label" parent="UpgradeVapeTurretButton"]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 30.0
@@ -189,10 +189,12 @@ theme_override_fonts/font = ExtResource("4_vxfcy")
 theme_override_font_sizes/font_size = 20
 text = "2000"
 
-[node name="Sprite2D" type="Sprite2D" parent="Upgrade_vape/MoneyLabel3"]
+[node name="Sprite2D" type="Sprite2D" parent="UpgradeVapeTurretButton/MoneyLabel3"]
 position = Vector2(-10, 9)
 scale = Vector2(0.007, 0.007)
 texture = ExtResource("5_mukki")
 
 [connection signal="pressed" from="PanelContainer/VBoxContainer/GumTurretButton" to="." method="_on_gum_turret_button_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/VapeTurretButton" to="." method="_on_vape_turret_button_pressed"]
+[connection signal="pressed" from="UpgradeGumTurretButton" to="." method="_on_upgrade_gum_turret_button_pressed"]
+[connection signal="pressed" from="UpgradeVapeTurretButton" to="." method="_on_upgrade_vape_turret_button_pressed"]
