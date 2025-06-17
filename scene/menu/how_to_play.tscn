@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://dogjahn0mqwcx"]
 
-[ext_resource type="Script" uid="uid://dh7fw0jafwyjo" path="res://scene/menu/how_to_play.gd" id="1_jib7x"]
+[ext_resource type="Script" path="res://scene/menu/how_to_play.gd" id="1_jib7x"]
 [ext_resource type="Texture2D" uid="uid://c0dui71k3ceeq" path="res://assets/UI/background/cloud-pixel-background.jpg" id="1_yrpej"]
 [ext_resource type="FontFile" uid="uid://cuq6cgihu0i06" path="res://assets/UI/fonts/editundo.ttf" id="2_kiy6h"]
 [ext_resource type="Texture2D" uid="uid://c56y6fk32gcdb" path="res://assets/UI/other/turret_placement.png" id="3_8crkb"]
