@@ -4,6 +4,7 @@ var dir:float
 var speed = 350
 var color : Color
 
+const damage_hit_sound = preload("res://assets/audio/sound_effects/bubble-pop-2-293341.mp3")
 
 func _ready() -> void:
 	color.r = randf_range(0.0, 1.0)
@@ -21,12 +22,5 @@ func _physics_process(delta: float):
 				var base_damage = 10.0
 				var damage = base_damage * GlobalVars.turret_damage_multiplier
 				collider.take_damage(damage)
-				damage_SFX()
+				GlobalAudio.play_sfx(damage_hit_sound)
 			queue_free()
-
-func damage_SFX():
-	var sfx_player = get_tree().root.get_node("SceneHandler/SFXPlayer")
-	var hit_sound = preload("res://assets/audio/sound_effects/bubble-pop-2-293341.mp3")
-	if sfx_player:
-		sfx_player.stream = hit_sound
-		sfx_player.play()

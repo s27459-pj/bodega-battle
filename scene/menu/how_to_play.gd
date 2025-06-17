@@ -23,13 +23,13 @@ var pages = [
 		"title": "Money Management",
 		"description": "You earn 1 coin per second, plus 10 coins for each enemy defeated."
 	}
-
 ]
 
 func _ready():
 	update_page()
-	$MarginContainer/LeftSide/ArrowRight.pressed.connect(on_arrow_right)
-	$MarginContainer/RightSide/ArrowLeft.pressed.connect(on_arrow_left)
+	$MarginContainer/Left/ArrowLeft.pressed.connect(on_arrow_left)
+	$MarginContainer/Right/ArrowRight.pressed.connect(on_arrow_right)
+
 func on_arrow_left():
 	current_index -= 1
 	if current_index < 0:
@@ -44,6 +44,6 @@ func on_arrow_right():
 
 func update_page():
 	var current = pages[current_index]
-	$MarginContainer/VBoxContainer/HowToTitle.text = current["title"]
-	$MarginContainer/VBoxContainer/Description.text = current["description"]
-	$MarginContainer/VBoxContainer/Panel2/HowToPhoto.texture = current["image"]
+	$MarginContainer/Center/HowToTitle.text = current["title"]
+	$MarginContainer/Center/Description.text = current["description"]
+	$MarginContainer/Center/Panel2/HowToPhoto.texture = current["image"]

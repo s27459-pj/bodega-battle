@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmrb4hsp8xoi2"]
+
+[ext_resource type="Script" uid="uid://db07l7qpa0e5a" path="res://global/global_audio.gd" id="1_8mxve"]
+[ext_resource type="AudioStream" uid="uid://c4565ylgva2lr" path="res://assets/audio/music/bag-of-rubber-bands-342985.mp3" id="1_gfmtt"]
+
+[node name="GlobalAudio" type="Node"]
+script = ExtResource("1_8mxve")
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_gfmtt")
+autoplay = true
+bus = &"Music"
+
+[node name="SFXPlayer" type="AudioStreamPlayer" parent="."]
+autoplay = true
+bus = &"SFX"
