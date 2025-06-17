@@ -17,7 +17,7 @@
 
 ### Logika gry
 
-- [ ] System punktacji ✅ ->  np. `1000 - czas * stracone_hp`
+- [x] System punktacji ✅ ->  np. `1000 - czas * stracone_hp`
 - [x] System żyć lub pasków energii ✅ -> hp
 - [x] Przeciwnicy z prostą AI (np. patrolowanie, pogoń, unikanie) ✅ -> najemnicy nasyłani przez przeciwnika 
 - [ ] Ulepszenia/bronie/power-upy ✅ -> najemnicy / fortyfikacje 
@@ -27,7 +27,7 @@
 - [ ] Proceduralne generowanie plansz (np. losowe rozmieszczenie przeszkód) -> losowy layout sklepu przeciwnika ✅
 - [ ] System osiągnięć (np. „zbierz wszystkie gwiazdki”) ❔ -> ewentualnie coś w stylu ograniczeń czasowych: złoty/ srebrny/ bronz medal 
 - [ ] Zagadki logiczne lub łamigłówki ❌
-- [ ] System ekonomii (np. waluta, sklep, zakupy) ✅
+- [x] System ekonomii (np. waluta, sklep, zakupy) ✅
 
 ### Grafika i animacja
 
@@ -47,7 +47,7 @@
 
 - [x] Ekran powitalny z tytułem gry ✅
 - [x] Menu główne (start, instrukcja, wyjście) ✅
-- [ ] Instrukcja lub samouczek w grze -> ekran z tekstem i ikonkami po starcie ✅
+- [x] Instrukcja lub samouczek w grze -> ekran z tekstem i ikonkami po starcie ✅
 - [ ] Ekran wygranej i przegranej ✅
 - [x] Możliwość restartu gry ✅
 - [x] Wybór poziomu trudności ✅
