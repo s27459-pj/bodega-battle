@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://b0ae1u8gg0h43"]
 
-[ext_resource type="Script" uid="uid://tck4vtb0i38s" path="res://objects/defences/sprzedawca-e-petów/smoke.gd" id="1_3rddr"]
+[ext_resource type="Script" uid="uid://tck4vtb0i38s" path="res://objects/defences/vape-turret/smoke.gd" id="1_3rddr"]
 [ext_resource type="Texture2D" uid="uid://vfiav362s1f" path="res://assets/sprites/defences/cloud.png" id="1_uo580"]
 
 [sub_resource type="Gradient" id="Gradient_3rddr"]

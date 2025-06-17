@@ -12,8 +12,8 @@ var building_scene: PackedScene
 # Where we're building the tower
 var build_location: Vector2
 
-var gum_turret_scene: PackedScene = load("res://objects/defences/basic-turret/gum-turret.tscn")
-var vape_turret_scene: PackedScene = load("res://objects/defences/sprzedawca-e-petów/cigaret.tscn")
+var gum_turret_scene: PackedScene = load("res://objects/defences/gum-turret/gum-turret.tscn")
+var vape_turret_scene: PackedScene = load("res://objects/defences/vape-turret/vape-turret.tscn")
 
 var buildable_spots_tilemap: TileMapLayer
 
