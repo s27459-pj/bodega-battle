@@ -25,6 +25,8 @@ func check_end_wave() -> void:
 
 func enter_prep_phase():
 	state = GameState.PREP
+	var new_song = preload("res://assets/audio/music/pixelated-dreams-328537.mp3")
+	GlobalAudio.play_music(new_song)
 	UI_prep.show_prep_ui()
 
 func start_wave():

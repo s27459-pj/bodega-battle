@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/the-wandering-samurai-344699.mp3-8a2612d6d390
 [params]
 
 loop=true
-loop_offset=0
-bpm=0
+loop_offset=3.0
+bpm=0.0
 beat_count=0
 bar_beats=4
