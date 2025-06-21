@@ -28,6 +28,7 @@ func enter_prep_phase():
 	var new_song = preload("res://assets/audio/music/pixelated-dreams-328537.mp3")
 	GlobalAudio.play_music(new_song)
 	UI_prep.show_prep_ui()
+	UI_prep.check_win_screen()
 
 func start_wave():
 	auto_coin.start_income()

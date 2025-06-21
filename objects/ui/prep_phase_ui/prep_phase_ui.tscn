@@ -43,6 +43,36 @@ theme_override_fonts/font = ExtResource("2_8uefh")
 theme_override_font_sizes/font_size = 30
 text = "Start Wave"
 
+[node name="win labels" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_left = 459.0
+offset_top = 14.0
+offset_right = 499.0
+offset_bottom = 54.0
+
+[node name="start endless" type="Label" parent="win labels"]
+offset_left = 453.0
+offset_top = 58.0
+offset_right = 692.0
+offset_bottom = 98.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.254902)
+theme_override_fonts/font = ExtResource("2_8uefh")
+theme_override_font_sizes/font_size = 31
+text = "Start endless...?"
+vertical_alignment = 1
+
+[node name="you won" type="Label" parent="win labels"]
+offset_left = -43.0
+offset_top = 226.0
+offset_right = 261.0
+offset_bottom = 306.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.254902)
+theme_override_fonts/font = ExtResource("2_8uefh")
+theme_override_font_sizes/font_size = 77
+text = "You Won!"
+vertical_alignment = 1
+
 [node name="MoneyLabel" type="Label" parent="."]
 layout_mode = 0
 offset_left = 459.0
